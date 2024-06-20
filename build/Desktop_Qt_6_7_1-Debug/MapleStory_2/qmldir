@@ -1,0 +1,9 @@
+module MapleStory_2
+typeinfo appMapleStory_2.qmltypes
+prefer :/MapleStory_2/
+Choose 1.0 Choose.qml
+Components 1.0 Components.qml
+Actions 1.0 Actions.qml
+Dialogs 1.0 Dialogs.qml
+Contents 1.0 Contents.qml
+

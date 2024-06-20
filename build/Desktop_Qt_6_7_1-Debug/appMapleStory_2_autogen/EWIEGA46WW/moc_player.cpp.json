@@ -1,0 +1,199 @@
+{
+    "classes": [
+        {
+            "className": "Player",
+            "methods": [
+                {
+                    "access": "public",
+                    "name": "xPos",
+                    "returnType": "qreal"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "xPos",
+                            "type": "qreal"
+                        }
+                    ],
+                    "name": "setXPos",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "yPos",
+                    "returnType": "qreal"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "yPos",
+                            "type": "qreal"
+                        }
+                    ],
+                    "name": "setYPos",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "isJumping",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "name": "isAttacking",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "name": "animationFinished",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "yPos",
+                    "notify": "yPosChanged",
+                    "read": "yPos",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "qreal",
+                    "user": false,
+                    "write": "setYPos"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "xPos",
+                    "notify": "xPosChanged",
+                    "read": "xPos",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "qreal",
+                    "user": false,
+                    "write": "setXPos"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "isJumping",
+                    "notify": "isJumpingChanged",
+                    "read": "isJumping",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 3,
+                    "name": "isAttacking",
+                    "notify": "isAttackingChanged",
+                    "read": "isAttacking",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false
+                }
+            ],
+            "qualifiedClassName": "Player",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "yPos",
+                            "type": "qreal"
+                        }
+                    ],
+                    "name": "yPosChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "xPos",
+                            "type": "qreal"
+                        }
+                    ],
+                    "name": "xPosChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "isJumping",
+                            "type": "bool"
+                        }
+                    ],
+                    "name": "isJumpingChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "isAttacking",
+                            "type": "bool"
+                        }
+                    ],
+                    "name": "isAttackingChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "name": "updatePosition",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "jump",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "attack",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "moveRight",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "moveLeft",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "player.h",
+    "outputRevision": 68
+}

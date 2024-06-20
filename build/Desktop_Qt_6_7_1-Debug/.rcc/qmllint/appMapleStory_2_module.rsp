@@ -1,0 +1,10 @@
+-I
+/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug
+-I
+/opt/Qt/6.7.1/gcc_64/./qml
+--resource
+/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qmake_MapleStory_2.qrc
+--resource
+/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/appMapleStory_2_raw_qml_0.qrc
+--module
+MapleStory_2

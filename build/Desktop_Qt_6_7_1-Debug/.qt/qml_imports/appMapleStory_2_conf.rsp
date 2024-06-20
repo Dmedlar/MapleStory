@@ -1,0 +1,14 @@
+-rootPath
+/root/Qt creater/ MapleStory
+-cmake-output
+-output-file
+/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/.qt/qml_imports/appMapleStory_2_conf.cmake
+-importPath
+/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/MapleStory_2
+-importPath
+/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug
+-importPath
+/opt/Qt/6.7.1/gcc_64/./qml
+-qrcFiles
+/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qmake_MapleStory_2.qrc
+/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/appMapleStory_2_raw_qml_0.qrc

@@ -1,0 +1,50 @@
+<RCC>
+  <qresource prefix="/MapleStory_2/">
+    <file alias="Choose.qml">/root/Qt creater/ MapleStory/Choose.qml</file>
+    <file alias="Components.qml">/root/Qt creater/ MapleStory/Components.qml</file>
+    <file alias="Actions.qml">/root/Qt creater/ MapleStory/Actions.qml</file>
+    <file alias="Dialogs.qml">/root/Qt creater/ MapleStory/Dialogs.qml</file>
+    <file alias="Contents.qml">/root/Qt creater/ MapleStory/Contents.qml</file>
+    <file alias="image/background0.jpg">/root/Qt creater/ MapleStory/image/background0.jpg</file>
+    <file alias="image/image42.png">/root/Qt creater/ MapleStory/image/image42.png</file>
+    <file alias="image/image85.png">/root/Qt creater/ MapleStory/image/image85.png</file>
+    <file alias="image/back.14.png">/root/Qt creater/ MapleStory/image/back.14.png</file>
+    <file alias="image/cake0.gif">/root/Qt creater/ MapleStory/image/cake0.gif</file>
+    <file alias="image/cake1.gif">/root/Qt creater/ MapleStory/image/cake1.gif</file>
+    <file alias="image/cake2.gif">/root/Qt creater/ MapleStory/image/cake2.gif</file>
+    <file alias="image/cake3.gif">/root/Qt creater/ MapleStory/image/cake3.gif</file>
+    <file alias="image/image44.png">/root/Qt creater/ MapleStory/image/image44.png</file>
+    <file alias="image/num0.png">/root/Qt creater/ MapleStory/image/num0.png</file>
+    <file alias="image/num1.png">/root/Qt creater/ MapleStory/image/num1.png</file>
+    <file alias="image/num2.png">/root/Qt creater/ MapleStory/image/num2.png</file>
+    <file alias="image/num3.png">/root/Qt creater/ MapleStory/image/num3.png</file>
+    <file alias="image/changenum0.png">/root/Qt creater/ MapleStory/image/changenum0.png</file>
+    <file alias="image/changenum1.png">/root/Qt creater/ MapleStory/image/changenum1.png</file>
+    <file alias="image/changenum2.png">/root/Qt creater/ MapleStory/image/changenum2.png</file>
+    <file alias="image/changenum3.png">/root/Qt creater/ MapleStory/image/changenum3.png</file>
+    <file alias="image/portrait.png">/root/Qt creater/ MapleStory/image/portrait.png</file>
+    <file alias="image/a.gif">/root/Qt creater/ MapleStory/image/a.gif</file>
+    <file alias="image/m.gif">/root/Qt creater/ MapleStory/image/m.gif</file>
+    <file alias="image/e.gif">/root/Qt creater/ MapleStory/image/e.gif</file>
+    <file alias="image/l.gif">/root/Qt creater/ MapleStory/image/l.gif</file>
+    <file alias="image/o.gif">/root/Qt creater/ MapleStory/image/o.gif</file>
+    <file alias="image/r.gif">/root/Qt creater/ MapleStory/image/r.gif</file>
+    <file alias="image/p.gif">/root/Qt creater/ MapleStory/image/p.gif</file>
+    <file alias="image/s.gif">/root/Qt creater/ MapleStory/image/s.gif</file>
+    <file alias="image/t.gif">/root/Qt creater/ MapleStory/image/t.gif</file>
+    <file alias="image/y.gif">/root/Qt creater/ MapleStory/image/y.gif</file>
+    <file alias="image/tree1.PNG">/root/Qt creater/ MapleStory/image/tree1.PNG</file>
+    <file alias="image/bagDialog.png">/root/Qt creater/ MapleStory/image/bagDialog.png</file>
+    <file alias="image/bag1.png">/root/Qt creater/ MapleStory/image/bag1.png</file>
+    <file alias="image/shop.png">/root/Qt creater/ MapleStory/image/shop.png</file>
+    <file alias="image/attribute.png">/root/Qt creater/ MapleStory/image/attribute.png</file>
+    <file alias="image/background1.png">/root/Qt creater/ MapleStory/image/background1.png</file>
+    <file alias="image/released.png">/root/Qt creater/ MapleStory/image/released.png</file>
+    <file alias="image/clicked.png">/root/Qt creater/ MapleStory/image/clicked.png</file>
+    <file alias="image/attributeDialog.png">/root/Qt creater/ MapleStory/image/attributeDialog.png</file>
+    <file alias="image/shopDialog.png">/root/Qt creater/ MapleStory/image/shopDialog.png</file>
+    <file alias="images/player.png">/root/Qt creater/ MapleStory/images/player.png</file>
+    <file alias="images/player_left.png">/root/Qt creater/ MapleStory/images/player_left.png</file>
+  </qresource>
+</RCC>
+
