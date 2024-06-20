@@ -20,7 +20,7 @@ Item {
             width:350
             height:550
             x:-19
-            y:220
+            y:270
           }
         Image{
             id:you
@@ -28,7 +28,7 @@ Item {
             width:350
             height:650
             x:859
-            y:95
+            y:155
           }
         Image{
             id:duo
@@ -116,7 +116,7 @@ Item {
             width:50
             height:50
             x:-15
-            y:695
+            y:750
           }
         Image{
             id:qiu4
@@ -124,7 +124,7 @@ Item {
             width:50
             height:50
             x:25
-            y:695
+            y:750
           }
         Image{
             id:qiu
@@ -132,15 +132,15 @@ Item {
             width:50
             height:50
             x:55
-            y:695
+            y:750
           }
         Image{
             id:lihua
             source:"images/lihua.png"
             width:200
             height:500
-            x:65
-            y:300
+            x:100
+            y:360
           }
         Image{
             id:qiu1
@@ -148,7 +148,7 @@ Item {
             width:50
             height:50
             x:230
-            y:695
+            y:750
           }
         Image{
             id:qiu2
@@ -156,7 +156,7 @@ Item {
             width:50
             height:50
             x:200
-            y:695
+            y:750
           }
         Image{
             id:qiu5
@@ -164,15 +164,15 @@ Item {
             width:50
             height:50
             x:170
-            y:695
-          }
+            y:750
+          }//
         Image{
             id:cao
             source:"images/cao1.png"
             width:50
             height:50
             x:0
-            y:650
+            y:700
           }
         Image{
           id:cao1
@@ -180,23 +180,31 @@ Item {
           width:50
           height:50
           x:40
-          y:630
+          y:680
         }
         Image{
           id:cao2
           source:"images/cao1.png"
           width:50
           height:50
-          x:135
-          y:570
+          x:165
+          y:625
         }
         Image{
           id:cao3
           source:"images/cao3.png"
           width:50
           height:50
-          x:175
-          y:570
+          x:205
+          y:627
+        }//左石头上
+        Image{
+            id:bi
+            source:"images/bi.png"
+            width:100
+            height:150
+            x:90
+            y:665
         }
         Image{
           id:cao4
@@ -204,7 +212,7 @@ Item {
           width:50
           height:50
           x:160
-          y:695
+          y:755
         }
         Image{
           id:cao5
@@ -212,7 +220,7 @@ Item {
           width:50
           height:50
           x:140
-          y:695
+          y:755
         }
         Image{
           id:cao6
@@ -220,7 +228,7 @@ Item {
           width:50
           height:50
           x:120
-          y:695
+          y:755
         }
         Image{
           id:cao7
@@ -228,7 +236,7 @@ Item {
           width:50
           height:50
           x:100
-          y:695
+          y:755
         }
         Image{
           id:cao8
@@ -236,7 +244,7 @@ Item {
           width:50
           height:50
           x:80
-          y:695
+          y:755
         }
         Image{
           id:shuhua
@@ -244,7 +252,7 @@ Item {
           width:250
           height:300
           x:1000
-          y:450
+          y:490
         }
         Image{
           id:he
@@ -252,8 +260,8 @@ Item {
           width:150
           height:200
           x:900
-          y:550
-          z:1
+          y:600
+           z:1
         }
         Image{
           id:lv
@@ -285,7 +293,7 @@ Item {
           width:50
           height:50
           x:1155
-          y:695
+          y:755
         }
         Image{
           id:cao10
@@ -293,7 +301,7 @@ Item {
           width:50
           height:50
           x:1125
-          y:695
+          y:755
         }
         Image{
           id:cao11
@@ -301,8 +309,8 @@ Item {
           width:50
           height:50
           x:1095
-          y:695
-          z:1
+          y:755
+          z:2
         }
         Image{
           id:cao12
@@ -310,7 +318,7 @@ Item {
           width:50
           height:50
           x:1065
-          y:695
+          y:755
         }
         Image{
           id:cao13
@@ -318,7 +326,7 @@ Item {
           width:50
           height:50
           x:1035
-          y:695
+          y:755
         }
         Image{
           id:cao14
@@ -326,7 +334,7 @@ Item {
           width:50
           height:50
           x:1015
-          y:695
+          y:755
         }
         Image{
           id:cao15
@@ -334,7 +342,7 @@ Item {
           width:50
           height:50
           x:985
-          y:695
+          y:755
         }
         Image{
           id:cao16
@@ -342,7 +350,7 @@ Item {
           width:50
           height:50
           x:885
-          y:695
+          y:755
         }
         Image{
           id:cao17
@@ -350,7 +358,7 @@ Item {
           width:50
           height:50
           x:855
-          y:695
+          y:755
         }
         Image{
           id:cao18
@@ -358,7 +366,7 @@ Item {
           width:50
           height:50
           x:865
-          y:652
+          y:715
         }
         Image{
           id:cao19
@@ -366,7 +374,7 @@ Item {
           width:50
           height:50
           x:900
-          y:625
+          y:685
         }
         Image{
           id:cao20
@@ -374,7 +382,7 @@ Item {
           width:50
           height:50
           x:930
-          y:625
+          y:715
         }
         Image{
           id:hua
@@ -382,7 +390,7 @@ Item {
           width:50
           height:50
           x:1095
-          y:670
+          y:730
         }
         // Image{
         //   id:hua1
@@ -429,7 +437,7 @@ Item {
             source:"images/yinghuo.png"
             width:200
             height:300
-            x:800
+            x:850
             y:500
             z:2
         }

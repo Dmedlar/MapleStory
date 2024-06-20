@@ -18,62 +18,18 @@ qt_add_qml_module(
   VERSION
   1.0
   QML_FILES
-  Main.qml
+  Window.qml
   SOURCES
   QML_FILES
   MyRectangle.qml
-  RESOURCES
-  ../images/bj.jpg
-  RESOURCES
-  ../images/cao1.png
-  RESOURCES
-  ../images/cao2.png
-  RESOURCES
-  ../images/cao3.png
-  RESOURCES
-  ../images/dt1.png
-  RESOURCES
-  ../images/dt2.png
-  RESOURCES
-  ../images/dt3.png
-  RESOURCES
-  ../images/duo.png
-  RESOURCES
-  ../images/fang.png
-  RESOURCES
-  ../images/guan.png
-  RESOURCES
-  ../images/he.png
-  RESOURCES
-  ../images/hua2.png
-  RESOURCES
-  ../images/lihua.png
-  RESOURCES
-  ../images/lvteng.png
-  RESOURCES
-  ../images/qiu3.png
-  RESOURCES
-  ../images/qu4.png
-  RESOURCES
-  ../images/shuhua.png
-  RESOURCES
-  ../images/start1.png
-  RESOURCES
-  ../images/yinghuo.png
-  RESOURCES
-  ../images/you.png
-  RESOURCES
-  ../images/zuo.png
   QML_FILES
-  wait.qml
-  RESOURCES
-  ../shou.mp3
-  RESOURCES
-  ../click.mp3
-  RESOURCES
-  ../images/ims.png
-  QML_FILES Actions.qml
-  QML_FILES Dialogs.qml)
+  Actions.qml
+  QML_FILES
+  Dialogs.qml
+  QML_FILES
+  Contents.qml
+  RESOURCES images/aishu.png images/bi.png images/bj.jpg images/cao1.png images/cao2.png images/cao3.png images/dt1.png images/dt2.png images/dt3.png images/duo.png images/fang.png images/guan.png images/guang.png images/he.png images/hua1.png images/hua2.png images/hua3.png images/hua4.png images/ims.png images/ku.png images/lihua.png images/lvteng.png images/midForest.nature.9.0.png images/qiu3.png images/qu4.png images/quan.png images/shuhua.png images/start.png images/start1.png images/yinghuo.png images/you.png images/zuo.png
+  RESOURCES music/click.mp3 music/shou.mp3)
 
 target_compile_features(appgame1 PRIVATE cxx_std_20)
 
