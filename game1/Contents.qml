@@ -3,7 +3,13 @@ import QtMultimedia
 
 Item {
     Rectangle{
-
+        Text {
+            text: qsTr("关于我们：李伯杉，侯丁瑞，张思源")
+            color: "black"
+            anchors.horizontalCenter: parent.horizontalCenter
+            // anchors.verticalCenter: parent.verticalCenter
+            y:700
+        }
         MediaPlayer {
                 id: backgroundMusic
                 audioOutput: AudioOutput{
@@ -31,7 +37,11 @@ Item {
             y:300
             property bool pressed: false
     TapHandler{
-        onTapped:{MediaPlayer.create(clickableRect)}
+        onTapped:{
+            components.choose.visible=true
+            start.visible=false
+            components.container.visible=true
+        }
     }
             //添加状态，点击改变图片大小
             states: [
@@ -79,5 +89,8 @@ Item {
     }
     MyRectangle{
 
+    }
+    Components{
+        id:components
     }
 }
