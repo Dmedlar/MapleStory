@@ -54,6 +54,10 @@ Item {
             }
 
             onClicked: {
+                _backgroundMusic.pause()
+                _backgroundMusic2.pause()
+                _backgroundMusic3.pause()
+                _backgroundMusic4.pause()
                 components.page0.visible=false
                 components.page1.visible=false
                 components.page2.visible=false
@@ -62,6 +66,7 @@ Item {
                 components.edgePage.visible=false
                 //返回关卡选择界面
                 container.visible=true
+                backgroundMusic.play()
             }
         }
     }
@@ -85,13 +90,238 @@ Item {
         x: offsetX
         y: offsetY
         width: 340
-        height:570
+        height:370
         Image {
             anchors.centerIn: parent
             width: parent.width*1.1
             height:parent.height*1.1
             source: "image/bagDialog.png"
         }
+        // Rectangle{
+        //     anchors.centerIn: parent
+        //     width: parent.width*1.1
+        //     height:parent.height*1.1
+        //     color: "blue"
+        //     Rectangle{
+        //         id:a
+        //         width:parent.width*0.8
+        //         height:parent.height*0.1
+        //         anchors.horizontalCenter: parent.horizontalCenter
+        //         y:parent.height*0.05
+        //         Text {
+        //             id: tool
+        //             text: qsTr("现有道具")
+        //         }
+        //         color: "white"
+        //     }
+        //     Rectangle{
+        //         id:b
+        //         width: a.width
+        //         height: parent.height*0.6
+        //         color: "white"
+        //         x:a.x
+        //         y:a.y+a.height+parent.height*0.05
+        //         Rectangle{
+        //             id:c11
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05
+        //             y:parent.width*0.05
+        //         }
+        //         Rectangle{
+        //             id:c12
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05*2+c.width
+        //             y:parent.width*0.05
+        //         }
+        //         Rectangle{
+        //             id:c13
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05*3+c.width*2
+        //             y:parent.width*0.05
+        //         }
+        //         Rectangle{
+        //             id:c14
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05*4+c.width*3
+        //             y:parent.width*0.05
+        //         }
+        //         Rectangle{
+        //             id:c21
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05
+        //             y:parent.width*0.05*2+c.width
+        //         }
+        //         Rectangle{
+        //             id:c22
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05*2+c.width
+        //             y:parent.width*0.05*2+c.width
+        //         }
+        //         Rectangle{
+        //             id:c23
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05*3+c.width*2
+        //             y:parent.width*0.05*2+c.width
+        //         }
+        //         Rectangle{
+        //             id:c24
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05*4+c.width*3
+        //             y:parent.width*0.05*2+c.width
+        //         }
+        //         Rectangle{
+        //             id:c31
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05
+        //             y:parent.width*0.05*3+c.width*2
+        //         }
+        //         Rectangle{
+        //             id:c32
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05*2+c.width
+        //             y:parent.width*0.05*3+c.width*2
+        //         }
+        //         Rectangle{
+        //             id:c33
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05*3+c.width*2
+        //             y:parent.width*0.05*3+c.width*2
+        //         }
+        //         Rectangle{
+        //             id:c34
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05*4+c.width*3
+        //             y:parent.width*0.05*3+c.width*2
+        //         }
+        //         Rectangle{
+        //             id:c41
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05
+        //             y:parent.width*0.05*4+c.width*3
+        //         }
+        //         Rectangle{
+        //             id:c42
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05*2+c.width
+        //             y:parent.width*0.05*4+c.width*3
+        //         }
+        //         Rectangle{
+        //             id:c43
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05*3+c.width*2
+        //             y:parent.width*0.05*4+c.width*3
+        //         }
+        //         Rectangle{
+        //             id:c44
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05*4+c.width*3
+        //             y:parent.width*0.05*4+c.width*3
+        //         }
+        //         Rectangle{
+        //             id:c51
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05
+        //             y:parent.width*0.05*5+c.width*4
+        //         }
+        //         Rectangle{
+        //             id:c52
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05*2+c.width
+        //             y:parent.width*0.05*5+c.width*4
+        //         }
+        //         Rectangle{
+        //             id:c53
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05*3+c.width2
+        //             y:parent.width*0.05*5+c.width*4
+        //         }
+        //         Rectangle{
+        //             id:c54
+        //             color:"brown"
+        //             width: parent.width*0.2
+        //             height: parent.width*0.2
+        //             x:parent.width*0.05*4+c.width3
+        //             y:parent.width*0.05*5+c.width*4
+        //         }
+        //     }
+        //     Rectangle{
+        //         id:d1
+        //         width:parent.width*0.1
+        //         height:d1.width
+        //         y:parent.height*0.05*3+parent.height*0.7
+        //         x:parent.width*0.02
+        //         color:"transparent"
+        //         Image{
+        //         id:money
+        //         source: "images/money.png"
+        //         width:d1.width
+        //         height: d1.height
+        //         }
+        //         Rectangle{
+        //             id:d2
+        //             width:parent.width*0.6
+        //             height:d1.height
+        //             color:"white"
+        //             x:parent.width*0.14
+        //             y:parent.height*0.05*3+parent.height*0.7
+        //             Text {
+        //                 id: moneynum
+        //                 text: qsTr("1500")
+        //             }
+        //         }
+        //         Rectangle{
+        //             id:d3
+        //             width: parent.width*0.2
+        //             height: d1.height
+        //             color:"transparent"
+        //             y:parent.height*0.05*3+parent.height*0.7
+        //             x:parent.width*0.78
+        //             Text {
+        //                 id: mo
+        //                 text: qsTr("金币")
+        //             }
+        //         }
+        //     }
+
+
     }
 
     /*属性窗口*/

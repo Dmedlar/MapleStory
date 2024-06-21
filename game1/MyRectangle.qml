@@ -3,6 +3,40 @@ import QtMultimedia
 import QtQuick.Controls
 import QtQuick.Layouts
 Item {
+    //蝴蝶飞行
+    property var butterfly:[
+    "images/Obj_acc1.img.grassySoil.nature.19.0.png",
+    "images/Obj_acc1.img.grassySoil.nature.19.1.png",
+    "images/Obj_acc1.img.grassySoil.nature.19.2.png",
+    "images/Obj_acc1.img.grassySoil.nature.19.3.png",
+        "images/Obj_acc1.img.grassySoil.nature.19.4.png",
+        "images/Obj_acc1.img.grassySoil.nature.19.5.png",
+        "images/Obj_acc1.img.grassySoil.nature.19.6.png",
+        "images/Obj_acc1.img.grassySoil.nature.19.7.png",
+        "images/Obj_acc1.img.grassySoil.nature.19.8.png"
+    ]
+    property int currentIndex:0
+    //蝴蝶落地
+    property var butterfly1:[
+    "images/Obj_acc1.img.grassySoil.nature.20.0.png",
+    "images/Obj_acc1.img.grassySoil.nature.20.1.png",
+    "images/Obj_acc1.img.grassySoil.nature.20.2.png",
+    "images/Obj_acc1.img.grassySoil.nature.20.3.png",
+    ]
+    property int currentIndex1:0
+    //粉色蝴蝶
+    property var butterfly2: [
+    "images/Obj_acc1.img.grassySoil.nature.21.0.png",
+        "images/Obj_acc1.img.grassySoil.nature.21.1.png",
+        "images/Obj_acc1.img.grassySoil.nature.21.2.png",
+        "images/Obj_acc1.img.grassySoil.nature.21.3.png",
+        "images/Obj_acc1.img.grassySoil.nature.21.4.png",
+        "images/Obj_acc1.img.grassySoil.nature.21.5.png",
+        "images/Obj_acc1.img.grassySoil.nature.21.6.png",
+        "images/Obj_acc1.img.grassySoil.nature.21.7.png",
+        "images/Obj_acc1.img.grassySoil.nature.21.8.png",
+    ]
+    property int currentIndex2: 0
     Rectangle{
         // anchors.fill:parent
         Image{
@@ -143,6 +177,25 @@ Item {
             y:360
           }
         Image{
+        id:butterfly3
+        source: butterfly[currentIndex]
+        width: 25
+        height: 19
+        x:200
+        y:330
+        z:1
+        }
+        Timer{
+            id:flyTimer
+            interval: 120
+            running: true
+            repeat: true
+            onTriggered: {
+                currentIndex=(currentIndex+1)%butterfly.length//循环每张图
+                butterfly3.source=butterfly[currentIndex]
+            }
+        }
+        Image{
             id:qiu1
             source:"images/qu4.png"
             width:50
@@ -255,6 +308,25 @@ Item {
           y:490
         }
         Image{
+        id:butter
+        source: butterfly2[currentIndex2]
+        width: 25
+        height: 19
+        x:1000
+        y:500
+        z:1
+        }
+        Timer{
+            id:flyTimer2
+            interval: 120
+            running: true
+            repeat: true
+            onTriggered: {
+                currentIndex2=(currentIndex2+1)%butterfly2.length//循环每张图
+                butter.source=butterfly2[currentIndex2]
+            }
+        }
+        Image{
           id:he
           source:"images/he.png"
           width:150
@@ -262,6 +334,25 @@ Item {
           x:900
           y:600
            z:1
+        }
+        Image{
+        id:butter1
+        source: butterfly1[currentIndex1]
+        width: 25
+        height: 19
+        x:900
+        y:620
+        z:1
+        }
+        Timer{
+            id:flyTimer1
+            interval: 120
+            running: true
+            repeat: true
+            onTriggered: {
+                currentIndex1=(currentIndex1+1)%butterfly1.length//循环每张图
+                butter1.source=butterfly1[currentIndex1]
+            }
         }
         Image{
           id:lv

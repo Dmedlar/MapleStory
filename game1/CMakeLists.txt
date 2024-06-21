@@ -156,7 +156,61 @@ qt_add_qml_module(
   part2/Obj_acc2.img.shineWood.gate.0.11.png
   part2/Obj_acc2.img.shineWood.minidungeon.1.0.png
   part2/Obj_acc2.img.shineWood.nature.0.0.png
-  QML_FILES Components.qml)
+  QML_FILES
+  Components.qml
+  RESOURCES
+  music/Bgm01.img.BadGuys.mp3
+  RESOURCES
+  music/Bgm00.img.SleepyWood.mp3
+  music/Bgm01.img.HighlandStar.mp3
+  music/Bgm01.img.MoonlightShadow.mp3
+  RESOURCES
+  images/berg.png
+  images/bergd.png
+  images/cloud.png
+  images/cloud0.png
+  images/cloud1.png
+  images/cloud2.png
+  images/cloud3.png
+  images/cloud4.png
+  images/cloud5.png
+  images/cloud6.png
+  images/cloud7.png
+  images/cloud8.png
+  images/cloud9.png
+  images/cloud11.png
+  images/cloud12.png
+  images/cloud13.png
+  images/cloud14.png
+  images/cloud15.png
+  images/goddess.png
+  images/ladder.png
+  images/laddery.png
+  images/toyCastle.cloud.1.0.png
+  images/toycloud.png
+  images/toycloud1.png
+  images/toycloud2.png
+  images/toycloud3.png
+  images/toycloud4.png
+  images/toycloud5.png
+  images/toydoor.png
+  RESOURCES
+  images/Obj_dungeon.img.metroSubway.acc.20.0.png
+  images/Obj_dungeon.img.metroSubway.acc.20.1.png
+  images/Obj_dungeon.img.metroSubway.acc.20.3.png
+  images/Obj_dungeon.img.metroSubway.acc.20.2.png
+  images/Obj_dungeon.img.metroSubway.acc.20.4.png
+  images/Obj_dungeon.img.metroSubway.acc.20.5.png
+  images/Obj_dungeon.img.metroSubway.acc.20.6.png
+  images/Obj_dungeon.img.metroSubway.acc.20.7.png
+  images/Obj_dungeon.img.metroSubway.acc.20.8.png
+  images/Obj_dungeon.img.metroSubway.acc.20.9.png
+  images/Obj_dungeon.img.metroSubway.acc.20.10.png
+  images/Obj_dungeon.img.metroSubway.acc.20.11.png
+  RESOURCES images/sky1.jpg images/sky2.jpg
+  RESOURCES images/sky3.jpg
+  RESOURCES images/money.png
+  RESOURCES images/云层-1.png images/云层2.png images/Obj_acc1.img.grassySoil.nature.19.0.png images/Obj_acc1.img.grassySoil.nature.19.1.png images/Obj_acc1.img.grassySoil.nature.19.2.png images/Obj_acc1.img.grassySoil.nature.19.3.png images/Obj_acc1.img.grassySoil.nature.19.4.png images/Obj_acc1.img.grassySoil.nature.19.5.png images/Obj_acc1.img.grassySoil.nature.19.6.png images/Obj_acc1.img.grassySoil.nature.19.7.png images/Obj_acc1.img.grassySoil.nature.19.8.png images/Obj_acc1.img.grassySoil.nature.20.0.png images/Obj_acc1.img.grassySoil.nature.20.1.png images/Obj_acc1.img.grassySoil.nature.20.2.png images/Obj_acc1.img.grassySoil.nature.20.3.png images/Obj_acc1.img.grassySoil.nature.21.0.png images/Obj_acc1.img.grassySoil.nature.21.1.png images/Obj_acc1.img.grassySoil.nature.21.2.png images/Obj_acc1.img.grassySoil.nature.21.3.png images/Obj_acc1.img.grassySoil.nature.21.4.png images/Obj_acc1.img.grassySoil.nature.21.5.png images/Obj_acc1.img.grassySoil.nature.21.6.png images/Obj_acc1.img.grassySoil.nature.21.7.png images/Obj_acc1.img.grassySoil.nature.21.8.png images/Obj_dungeon.img.blueCave.set2.5.0.png images/Obj_dungeon.img.blueCave.set2.6.0.png images/Obj_dungeon.img.blueCave.set2.7.0.png images/Obj_dungeon.img.blueCave.set2.8.0.png images/Obj_dungeon.img.blueCave.set2.9.0.png images/Obj_dungeon.img.blueCave.set2.10.0.png images/Obj_dungeon.img.blueCave.set2.11.0.png images/Obj_dungeon.img.blueCave.set2.12.0.png images/Obj_dungeon.img.blueCave.set2.13.0.png images/Obj_dungeon.img.blueCave.set2.14.0.png images/Obj_dungeon.img.blueCave.set2.15.0.png images/Obj_dungeon.img.blueCave.set2.16.0.png images/Obj_dungeon.img.blueCave.set4.4.0.png)
 
 target_compile_features(appgame1 PRIVATE cxx_std_20)
 

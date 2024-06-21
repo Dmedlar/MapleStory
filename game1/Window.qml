@@ -9,8 +9,8 @@ ApplicationWindow {
     height: 800
     visible: true
     title: qsTr("冒险岛")
-    minimumWidth:400
-    minimumHeight:300
+    minimumWidth:1200
+    minimumHeight:800
     maximumWidth:1200
     maximumHeight:800
     Contents{
