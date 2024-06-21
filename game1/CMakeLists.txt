@@ -207,10 +207,78 @@ qt_add_qml_module(
   images/Obj_dungeon.img.metroSubway.acc.20.9.png
   images/Obj_dungeon.img.metroSubway.acc.20.10.png
   images/Obj_dungeon.img.metroSubway.acc.20.11.png
-  RESOURCES images/sky1.jpg images/sky2.jpg
-  RESOURCES images/sky3.jpg
-  RESOURCES images/money.png
-  RESOURCES images/云层-1.png images/云层2.png images/Obj_acc1.img.grassySoil.nature.19.0.png images/Obj_acc1.img.grassySoil.nature.19.1.png images/Obj_acc1.img.grassySoil.nature.19.2.png images/Obj_acc1.img.grassySoil.nature.19.3.png images/Obj_acc1.img.grassySoil.nature.19.4.png images/Obj_acc1.img.grassySoil.nature.19.5.png images/Obj_acc1.img.grassySoil.nature.19.6.png images/Obj_acc1.img.grassySoil.nature.19.7.png images/Obj_acc1.img.grassySoil.nature.19.8.png images/Obj_acc1.img.grassySoil.nature.20.0.png images/Obj_acc1.img.grassySoil.nature.20.1.png images/Obj_acc1.img.grassySoil.nature.20.2.png images/Obj_acc1.img.grassySoil.nature.20.3.png images/Obj_acc1.img.grassySoil.nature.21.0.png images/Obj_acc1.img.grassySoil.nature.21.1.png images/Obj_acc1.img.grassySoil.nature.21.2.png images/Obj_acc1.img.grassySoil.nature.21.3.png images/Obj_acc1.img.grassySoil.nature.21.4.png images/Obj_acc1.img.grassySoil.nature.21.5.png images/Obj_acc1.img.grassySoil.nature.21.6.png images/Obj_acc1.img.grassySoil.nature.21.7.png images/Obj_acc1.img.grassySoil.nature.21.8.png images/Obj_dungeon.img.blueCave.set2.5.0.png images/Obj_dungeon.img.blueCave.set2.6.0.png images/Obj_dungeon.img.blueCave.set2.7.0.png images/Obj_dungeon.img.blueCave.set2.8.0.png images/Obj_dungeon.img.blueCave.set2.9.0.png images/Obj_dungeon.img.blueCave.set2.10.0.png images/Obj_dungeon.img.blueCave.set2.11.0.png images/Obj_dungeon.img.blueCave.set2.12.0.png images/Obj_dungeon.img.blueCave.set2.13.0.png images/Obj_dungeon.img.blueCave.set2.14.0.png images/Obj_dungeon.img.blueCave.set2.15.0.png images/Obj_dungeon.img.blueCave.set2.16.0.png images/Obj_dungeon.img.blueCave.set4.4.0.png)
+  RESOURCES
+  images/sky1.jpg
+  images/sky2.jpg
+  RESOURCES
+  images/sky3.jpg
+  RESOURCES
+  images/money.png
+  RESOURCES
+  images/云层-1.png
+  images/云层2.png
+  images/Obj_acc1.img.grassySoil.nature.19.0.png
+  images/Obj_acc1.img.grassySoil.nature.19.1.png
+  images/Obj_acc1.img.grassySoil.nature.19.2.png
+  images/Obj_acc1.img.grassySoil.nature.19.3.png
+  images/Obj_acc1.img.grassySoil.nature.19.4.png
+  images/Obj_acc1.img.grassySoil.nature.19.5.png
+  images/Obj_acc1.img.grassySoil.nature.19.6.png
+  images/Obj_acc1.img.grassySoil.nature.19.7.png
+  images/Obj_acc1.img.grassySoil.nature.19.8.png
+  images/Obj_acc1.img.grassySoil.nature.20.0.png
+  images/Obj_acc1.img.grassySoil.nature.20.1.png
+  images/Obj_acc1.img.grassySoil.nature.20.2.png
+  images/Obj_acc1.img.grassySoil.nature.20.3.png
+  images/Obj_acc1.img.grassySoil.nature.21.0.png
+  images/Obj_acc1.img.grassySoil.nature.21.1.png
+  images/Obj_acc1.img.grassySoil.nature.21.2.png
+  images/Obj_acc1.img.grassySoil.nature.21.3.png
+  images/Obj_acc1.img.grassySoil.nature.21.4.png
+  images/Obj_acc1.img.grassySoil.nature.21.5.png
+  images/Obj_acc1.img.grassySoil.nature.21.6.png
+  images/Obj_acc1.img.grassySoil.nature.21.7.png
+  images/Obj_acc1.img.grassySoil.nature.21.8.png
+  images/Obj_dungeon.img.blueCave.set2.5.0.png
+  images/Obj_dungeon.img.blueCave.set2.6.0.png
+  images/Obj_dungeon.img.blueCave.set2.7.0.png
+  images/Obj_dungeon.img.blueCave.set2.8.0.png
+  images/Obj_dungeon.img.blueCave.set2.9.0.png
+  images/Obj_dungeon.img.blueCave.set2.10.0.png
+  images/Obj_dungeon.img.blueCave.set2.11.0.png
+  images/Obj_dungeon.img.blueCave.set2.12.0.png
+  images/Obj_dungeon.img.blueCave.set2.13.0.png
+  images/Obj_dungeon.img.blueCave.set2.14.0.png
+  images/Obj_dungeon.img.blueCave.set2.15.0.png
+  images/Obj_dungeon.img.blueCave.set2.16.0.png
+  images/Obj_dungeon.img.blueCave.set4.4.0.png
+  QML_FILES
+  Components.qml
+  QML_FILES
+  Characters.qml
+  RESOURCES
+  part1/image133.png
+  part1/image135.png
+  part1/image137.png
+  part1/image140.png
+  part1/image159.png
+  part1/image161.png
+  part1/image163.png
+  part1/image165.png
+  part1/image167.png
+  part1/image169.png
+  part1/image171.png
+  part1/image173.png
+  part1/image176.png
+  part1/image215.png
+  part1/image217.png
+  part1/image219.png
+  part1/image221.png
+  part1/image223.png
+  part1/image225.png
+  part1/image227.png
+  part1/image229.png
+  part1/image232.png)
 
 target_compile_features(appgame1 PRIVATE cxx_std_20)
 
