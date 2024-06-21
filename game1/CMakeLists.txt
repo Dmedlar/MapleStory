@@ -156,7 +156,9 @@ qt_add_qml_module(
   part2/Obj_acc2.img.shineWood.gate.0.11.png
   part2/Obj_acc2.img.shineWood.minidungeon.1.0.png
   part2/Obj_acc2.img.shineWood.nature.0.0.png
-  QML_FILES Components.qml)
+  QML_FILES Components.qml
+  QML_FILES Characters.qml
+  RESOURCES part1/image133.png part1/image135.png part1/image137.png part1/image140.png part1/image159.png part1/image161.png part1/image163.png part1/image165.png part1/image167.png part1/image169.png part1/image171.png part1/image173.png part1/image176.png part1/image215.png part1/image217.png part1/image219.png part1/image221.png part1/image223.png part1/image225.png part1/image227.png part1/image229.png part1/image232.png)
 
 target_compile_features(appgame1 PRIVATE cxx_std_20)
 

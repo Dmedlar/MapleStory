@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Window
+import QtQuick3D.Physics
 
 Item {
     /*游戏的各个关卡界面*/
@@ -29,6 +30,18 @@ Item {
         "part2/Obj_acc2.img.shineWood.gate.0.11.png",
     ]
     property int currentIndex:0//图片索引
+
+    property var images1:[
+        "part1/image133.png",
+        "part1/image135.png",
+        "part1/image137.png"
+    ]
+    property int currentIndex1: 0
+
+    Component.onCompleted: {
+        rightLeftAnimation.start()
+        upDownAnimation.start()
+            }
     /*关卡选择界面*/
     Page{
         id:_choose
@@ -174,34 +187,81 @@ Item {
                     x:background0.width
                     source: "image/background1.png"
                 }
-            }
+                /*npc1的图像动画*/
+                Image {
+                    id: _npc1
+                    source: images1[currentIndex1]
+                    width: 63
+                    height: 74
+                    y:-100
+                    x:800
+                }
+                NumberAnimation{
+                    id:_npc1Fall
+                    target: _npc1
+                    property: "y"
+                    to:705
+                    duration: 3000
+                    easing.type: Easing.InOutQuad
+                }
+
+                Timer{
+                    id:_npc1Timer
+                    interval: 200
+                    running: true
+                    repeat: true
+                    onTriggered: {
+                        currentIndex1=(currentIndex1+1)%images1.length//循环每张图
+                        _npc1.source=images1[currentIndex1]
+                    }
+                }
+
+                // function chasePlayer() {
+                //         var direction = player.x - _npc1.x;
+                //         var speed = 5; // 怪物移动速度
+                //         if(direction<0){
+                //             _npc1.x+=speed
+                //         }else{
+                //             _npc1.x-=speed
+                //         }
+                //         console.log("sssss")
+                //     }
+
+                // 定时器，每隔一段时间调用一次chasePlayer函数
+                // Timer {
+                //     interval: 1000
+                //     repeat: true
+                //     onTriggered: {
+                //         var direction = player.x - _npc1.x;
+                //         var speed = 5; // 怪物移动速度
+                //         if(direction<0){
+                //             _npc1.x+=speed
+                //         }else{
+                //             _npc1.x-=speed
+                //         }
+                //         console.log("sssss")
+                //     }
+                // }
+        }
 
             Rectangle {
-                        Image{
-                            id: player
-                            width: 50
-                            height: 50
-                            source:"image/e.gif"
-                            y:500
-                            x:0
-                            focus:true
-                            Keys.onPressed: {
-                                        switch(event.key) {
-                                        case Qt.Key_A:
-                                            player.x -= 1
-                                            break
-                                        case Qt.Key_D:
-                                            player.x += 1
-                                            break
-                                        // case Qt.Key_W:
-
-                                        //     break
-                                        }
-                                    }
-                        }
-
+                id: player
+                width: 50
+                height: 50
+                color: "red"
+                radius: 25 // 使角色为圆形
+                y:300
+                x:0
+                property int i:0
                         // 触发屏幕滚动
                         onXChanged: {
+                            if(player.x>150){
+                                for(i;i<1;i++){
+                                  _npc1Fall.start()
+                                }
+                            }
+
+
                             // 如果角色到达场景边缘的阈值
                             if (player.x + width >scrollThreshold && player.x + width < sceneWidth) {
                                 // 移动场景内容（背景和角色）
@@ -214,6 +274,21 @@ Item {
                                                 if (background0.x >= background0.width) {
                                                     background0.x -= background0.width;
                                                 }
+                            }
+                        }
+                        MouseArea {
+                                    id: dragArea
+                                    anchors.fill: parent
+                                    drag.target: parent
+                                }
+                        // 使角色可以通过水平拖拽移动
+                        Drag.active: dragArea.drag.active
+                        Drag.hotSpot.x: player.width / 2
+                        Drag.hotSpot.y: player.height / 2
+                        Drag.onActiveChanged: {
+                            if (!dragArea.drag.active) {
+                                x = player.x
+                                y = player.y
                             }
                         }
                 }
@@ -230,6 +305,7 @@ Item {
             id:gameScene1
             width: 1200
             height: 800
+
             Image {
                 id: background1
                 width:1200
@@ -336,7 +412,62 @@ Item {
                     height: 127*2
                     source: "part2/Obj_acc2.img.shineWood.foot.26.0.png"
                 }
+                /*横向移动*/
+                Image {
+                    id: _stand3
+                    width: 200
+                    height: 20
+                    source: "part2/Obj_acc1.img.lv200.archer.2.0.png"
+                    x:_bridge1.x+_bridge1.width+50
+                    y:_bridge1.y-60
 
+                }
+                NumberAnimation {
+                            id: rightLeftAnimation
+                            target: _stand3
+                            properties: "x"
+                            to: _stand3.x + 400
+                            duration: 2000
+                            easing.type: Easing.InOutQuad
+                            onFinished: rightLeftAnimation_return.start()
+                        }
+                NumberAnimation {
+                            id: rightLeftAnimation_return
+                            target: _stand3
+                            properties: "x"
+                            to: _stand3.x - 400
+                            duration: 2000
+                            easing.type: Easing.InOutQuad
+                            onFinished:rightLeftAnimation.start()
+                        }
+
+                /*竖直移动*/
+                Image {
+                    id: _stand4
+                    width: 200
+                    height: 20
+                    source: "part2/Obj_acc1.img.lv200.archer.2.0.png"
+                    x:_bridge1.x+_bridge1.width+_stand3.width+450
+                    y:_stand3.y-200
+                }
+                NumberAnimation {
+                            id: upDownAnimation
+                            target: _stand4
+                            properties: "y"
+                            to: _stand4.y + 400
+                            duration: 2000
+                            easing.type: Easing.InOutQuad
+                            onFinished: upDownAnimation_return.start()
+                        }
+                NumberAnimation {
+                            id: upDownAnimation_return
+                            target: _stand4
+                            properties: "y"
+                            to: _stand4.y - 400
+                            duration: 2000
+                            easing.type: Easing.InOutQuad
+                            onFinished:upDownAnimation.start()
+                        }
             }
 
             /*背景的滚动*/
@@ -376,6 +507,7 @@ Item {
                         }
                 }
         }
+
     }
     /*关卡3*/
     Page{
@@ -586,3 +718,4 @@ Item {
         id:dialogs
     }
 }
+
