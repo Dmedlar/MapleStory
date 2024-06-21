@@ -32,8 +32,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/appMapleStory_2.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appMapleStory_2_qmlcache_loader.cpp.o.d"
   "CMakeFiles/appMapleStory_2.dir/main.cpp.o"
   "CMakeFiles/appMapleStory_2.dir/main.cpp.o.d"
-  "CMakeFiles/appMapleStory_2.dir/player.cpp.o"
-  "CMakeFiles/appMapleStory_2.dir/player.cpp.o.d"
   "MapleStory_2/appMapleStory_2.qmltypes"
   "appMapleStory_2"
   "appMapleStory_2.pdb"

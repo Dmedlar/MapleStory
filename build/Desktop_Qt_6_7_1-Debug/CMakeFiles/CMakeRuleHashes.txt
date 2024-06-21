@@ -57,6 +57,8 @@ f257d1fdc7081a3755448d5d28c44996 MapleStory_2/image/shopDialog.png
 2f86cb4a7e301079b94f41dd1a09d268 MapleStory_2/image/t.gif
 81370eb4dc2699cb4c6a512b5f5861e4 MapleStory_2/image/tree1.PNG
 d733a093c444eecc483d0fc47591dab3 MapleStory_2/image/y.gif
+45802c2ecc0c74db591d2d65b23c5a39 MapleStory_2/images/attack.png
+b7ded669a542e0a19b589245972dd9a2 MapleStory_2/images/attack_runing.png
 bbf436d69beaf92da3eb18267ee8d70a MapleStory_2/images/player.png
 cb61dbfd6b3f9762491c87153500d987 MapleStory_2/images/player_left.png
 d6156c02e0ce04b2498549887e8b4a94 appMapleStory_2_autogen/timestamp

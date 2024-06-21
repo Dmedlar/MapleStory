@@ -249,6 +249,14 @@ MapleStory_2/images/player_left.png: /root/Qt\ creater/\ MapleStory/images/playe
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_45) "Copying images/player_left.png to /root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/MapleStory_2/images/player_left.png"
 	cd "/root/Qt creater/ MapleStory" && /usr/bin/cmake -E copy "/root/Qt creater/ MapleStory/images/player_left.png" "/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/MapleStory_2/images/player_left.png"
 
+MapleStory_2/images/attack.png: /root/Qt\ creater/\ MapleStory/images/attack.png
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_46) "Copying images/attack.png to /root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/MapleStory_2/images/attack.png"
+	cd "/root/Qt creater/ MapleStory" && /usr/bin/cmake -E copy "/root/Qt creater/ MapleStory/images/attack.png" "/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/MapleStory_2/images/attack.png"
+
+MapleStory_2/images/attack_runing.png: /root/Qt\ creater/\ MapleStory/images/attack_runing.png
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_47) "Copying images/attack_runing.png to /root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/MapleStory_2/images/attack_runing.png"
+	cd "/root/Qt creater/ MapleStory" && /usr/bin/cmake -E copy "/root/Qt creater/ MapleStory/images/attack_runing.png" "/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/MapleStory_2/images/attack_runing.png"
+
 appMapleStory_2_tooling: MapleStory_2/Actions.qml
 appMapleStory_2_tooling: MapleStory_2/Choose.qml
 appMapleStory_2_tooling: MapleStory_2/Components.qml
@@ -292,6 +300,8 @@ appMapleStory_2_tooling: MapleStory_2/image/shopDialog.png
 appMapleStory_2_tooling: MapleStory_2/image/t.gif
 appMapleStory_2_tooling: MapleStory_2/image/tree1.PNG
 appMapleStory_2_tooling: MapleStory_2/image/y.gif
+appMapleStory_2_tooling: MapleStory_2/images/attack.png
+appMapleStory_2_tooling: MapleStory_2/images/attack_runing.png
 appMapleStory_2_tooling: MapleStory_2/images/player.png
 appMapleStory_2_tooling: MapleStory_2/images/player_left.png
 appMapleStory_2_tooling: CMakeFiles/appMapleStory_2_tooling.dir/build.make

@@ -1,12 +1,14 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include "player.h"
+//#include "bullet.h"
+//#include "player.h"
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    qmlRegisterType<Player>("QmlPlayer", 1, 0, "Player");
+    //qmlRegisterType<Player>("QmlPlayer", 1, 0, "Player");
+    //qmlRegisterType<Bullet>("QmlBullet", 1, 0, "Bullet");
 
     QQmlApplicationEngine engine;
     const QUrl url(u"qrc:/MapleStory_2/Choose.qml"_qs);

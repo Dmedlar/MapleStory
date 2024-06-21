@@ -48,9 +48,12 @@ qt_add_qml_module(
   RESOURCES image/released.png image/clicked.png
   RESOURCES image/attributeDialog.png
   RESOURCES image/shopDialog.png
-  SOURCES player.h player.cpp
+  SOURCES
   RESOURCES images/player.png
-  RESOURCES images/player_left.png)
+  RESOURCES images/player_left.png
+  SOURCES
+  RESOURCES images/attack.png
+  RESOURCES images/attack_runing.png  )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1. If
 # you are developing for iOS or macOS you should consider setting an explicit,

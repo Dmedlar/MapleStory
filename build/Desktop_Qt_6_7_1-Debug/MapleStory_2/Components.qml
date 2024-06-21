@@ -1,7 +1,6 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Window
-import QmlPlayer
 
 Item {
     /*游戏的各个关卡界面*/
@@ -37,71 +36,69 @@ Item {
                     source: "image/background1.png"
                 }
             }
-
-            Player{
-                id:role
-            }
-        //     /*关于背景图的滚动，应该写在角色移动函数中*/
             Rectangle {
-                        id: player
-                        width: 100
-                        height: 100
+                        id: playervisal
                         color: "transparent"
-                        //radius: 25 // 使角色为圆形
-                        x:role.xPos
-                        y:gameScene.height - player.height + role.yPos
-
-                        Image {
-                            id: playervisal
-                            width: 60
-                            height: 80
-                            source: "./images/player.png"
-                        }
-
-                        // 触发屏幕滚动
-                        onXChanged: {
-                            // 如果角色到达场景边缘的阈值
-                            if (player.x + width >gameScene.scrollThreshold
-                                    && player.x + width < gameScene.sceneWidth) {
-                                // 移动场景内容（背景和角色）
-                                var scrollDistance = player.x + width - gameScene.scrollThreshold;
-                                background0.x -= scrollDistance;
-                                player.x=gameScene.width*0.8-player.width
-                                if (background0.x <= -background0.width) {
-                                                    background0.x += background0.width;
-                                                }
-                                                if (background0.x >= background0.width) {
-                                                    background0.x -= background0.width;
-                                                }
-                            }
-                        }
+                        anchors.fill: parent
                 }
         }
-        Actions{
-            id:action
+        Actions {
+            id: player
+            x: 150
+            Image {
+                id: img
+                width: 60
+                height: 80
+                source: "./images/player.png"
+            }
         }
 
         focus: true
-                Keys.onPressed: {
-                    switch(event.key){
-                    case Qt.Key_D:
-                        if(role.xPos < gameScene.width - player.width)
-                        role.moveRight()
-                            //action.moveright()
-                        console.log("move")
-                        console.log(role.xPos)
-                        playervisal.source = "./images/player.png"
-                            break;
-                    case Qt.Key_A:
-                        if(role.xPos > 0)
-                        role.moveLeft()
-                        playervisal.source = "./images/player_left.png"
-                            break;
-                    case Qt.Key_Space:
-                        role.jump()
+        Keys.onSpacePressed:player.jump()
+
+        Keys.onPressed: {
+            if(event.key === Qt.Key_D){
+                if(player.x + player.width <= gameScene.width){
+                    player.x += player.xVelocity
+                    img.source = "./images/player.png"
+                }
+                console.log(player.x)
+            }
+            if(event.key === Qt.Key_A){
+                if(player.x > 0){
+                    player.x -= player.xVelocity
+                    img.source = "./images/player_left.png"
+                }
+            }
+            if(event.key === Qt.Key_J){
+                player.attack()
+            }
+        }
+        Rectangle {
+            id: l
+            width: 50
+            height: 50
+            color: "transparent"
+            //radius: 25
+            y:player.y
+            x:player.x
+            onXChanged: {
+                if (player.x + player.width > gameScene.scrollThreshold
+                        && player.x + player.width < gameScene.sceneWidth)
+                {
+                    var scrollDistance = player.x + player.width - gameScene.scrollThreshold;
+                    background0.x -= scrollDistance;
+                    player.x = gameScene.width * 0.8 - player.width
+                    x = gameScene.width * 0.8 - player.width
+                    if (background0.x <= -background0.width) {
+                        background0.x += background0.width;
+                    }
+                    if (background0.x >= background0.width) {
+                        background0.x -= background0.width;
                     }
                 }
-
+            }
+        }
     }
 
     Page{
@@ -297,62 +294,62 @@ Item {
 
         /*子弹*/
 
-        Rectangle {
-            id: bullet
-            width: 20
-            height: 20
-            color: "red"
-            visible: false
+        // Rectangle {
+        //     id: bullet
+        //     width: 20
+        //     height: 20
+        //     color: "red"
+        //     visible: false
 
-            Player{
-                id:player_l
-            }
+        //     Player{
+        //         id:player_l
+        //     }
 
-            property point targetPosition: Qt.point(player_l.position.x, player_l.position.y)
+        //     property point targetPosition: Qt.point(player_l.position.x, player_l.position.y)
 
-            function fire(x, y) {
-                targetPosition = Qt.point(x, y)
-                visible = true
-                x = player_l.position.x
-                y = player_l.position.y
-                bulletAnimation.start()
-            }
+        //     function fire(x, y) {
+        //         targetPosition = Qt.point(x, y)
+        //         visible = true
+        //         x = player_l.position.x
+        //         y = player_l.position.y
+        //         bulletAnimation.start()
+        //     }
 
-            ParallelAnimation {
-                id: bulletAnimation
+        //     ParallelAnimation {
+        //         id: bulletAnimation
 
-                PropertyAnimation {
-                    target: bullet
-                    properties: "x"
-                    to: bullet.targetPosition.x
-                    duration: 1000
-                }
+        //         PropertyAnimation {
+        //             target: bullet
+        //             properties: "x"
+        //             to: bullet.targetPosition.x
+        //             duration: 1000
+        //         }
 
-                PropertyAnimation {
-                    target: bullet
-                    properties: "y"
-                    to: bullet.targetPosition.y
-                    duration: 1000
-                    onFinished:{
-                        bullet.visible = false
-                        bullet.destroy()
-                    }
-                    }
-                }
-        }
+        //         PropertyAnimation {
+        //             target: bullet
+        //             properties: "y"
+        //             to: bullet.targetPosition.y
+        //             duration: 1000
+        //             onFinished:{
+        //                 bullet.visible = false
+        //                 bullet.destroy()
+        //             }
+        //             }
+        //         }
+        // }
 
-        TapHandler{
-            onTapped: {
-                var bullet = bulletComponent.createObject(parent)
-                if (bullet) {
-                    bullet.x = player.x + player.width / 2 - bullet.width / 2
-                    bullet.y = player.y + player.height / 2 - bullet.height / 2
-                    var targetX = mouse.x - bullet.width / 2
-                    var targetY = mouse.y - bullet.height / 2
-                    bullet.fire(targetX, targetY)
-                }
-            }
-        }
+        // TapHandler{
+        //     onTapped: {
+        //         var bullet = bulletComponent.createObject(parent)
+        //         if (bullet) {
+        //             bullet.x = player.x + player.width / 2 - bullet.width / 2
+        //             bullet.y = player.y + player.height / 2 - bullet.height / 2
+        //             var targetX = mouse.x - bullet.width / 2
+        //             var targetY = mouse.y - bullet.height / 2
+        //             bullet.fire(targetX, targetY)
+        //         }
+        //     }
+        // }
 
         // /*商城*/
         // Rectangle{
@@ -380,8 +377,5 @@ Item {
             y:choose.height-10-height
             onClicked: {dialogs.exitDialog.open()}
         }
-    }
-    Actions{
-        id:actions
     }
 }

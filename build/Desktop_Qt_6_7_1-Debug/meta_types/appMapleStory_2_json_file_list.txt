@@ -1,1 +1,0 @@
-/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/appMapleStory_2_autogen/include/../EWIEGA46WW/moc_player.cpp.json

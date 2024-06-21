@@ -399,12 +399,4 @@ CMakeFiles/appMapleStory_2.dir/main.cpp.o: \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qqmlregistration.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQmlIntegration/qqmlintegration.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qqmlerror.h \
-  /opt/Qt/6.7.1/gcc_64/include/QtQml/qqmlabstracturlinterceptor.h \
-  /root/Qt\ creater/\ MapleStory/player.h \
-  /opt/Qt/6.7.1/gcc_64/include/QtCore/QObject \
-  /opt/Qt/6.7.1/gcc_64/include/QtCore/QPointF \
-  /opt/Qt/6.7.1/gcc_64/include/QtCore/QPropertyAnimation \
-  /opt/Qt/6.7.1/gcc_64/include/QtCore/qpropertyanimation.h \
-  /opt/Qt/6.7.1/gcc_64/include/QtCore/qvariantanimation.h \
-  /opt/Qt/6.7.1/gcc_64/include/QtCore/qabstractanimation.h \
-  /opt/Qt/6.7.1/gcc_64/include/QtCore/qeasingcurve.h
+  /opt/Qt/6.7.1/gcc_64/include/QtQml/qqmlabstracturlinterceptor.h

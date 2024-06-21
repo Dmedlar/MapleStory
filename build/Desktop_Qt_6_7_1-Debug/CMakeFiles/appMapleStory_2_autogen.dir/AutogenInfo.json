@@ -1135,15 +1135,7 @@
 	"CROSS_CONFIG" : false,
 	"DEP_FILE" : "/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/appMapleStory_2_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "appMapleStory_2_autogen/timestamp",
-	"HEADERS" : 
-	[
-		[
-			"/root/Qt creater/ MapleStory/player.h",
-			"Mu",
-			"EWIEGA46WW/moc_player.cpp",
-			null
-		]
-	],
+	"HEADERS" : [],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/appMapleStory_2_autogen/include",
 	"MOC_COMPILATION_FILE" : "/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/appMapleStory_2_autogen/mocs_compilation.cpp",
@@ -1236,8 +1228,7 @@
 	"SETTINGS_FILE" : "/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appMapleStory_2_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/root/Qt creater/ MapleStory/main.cpp", "Mu", null ],
-		[ "/root/Qt creater/ MapleStory/player.cpp", "Mu", null ]
+		[ "/root/Qt creater/ MapleStory/main.cpp", "Mu", null ]
 	],
 	"USE_BETTER_GRAPH" : false,
 	"VERBOSITY" : 0

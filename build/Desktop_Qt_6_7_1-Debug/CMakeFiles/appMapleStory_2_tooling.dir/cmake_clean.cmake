@@ -42,6 +42,8 @@ file(REMOVE_RECURSE
   "MapleStory_2/image/t.gif"
   "MapleStory_2/image/tree1.PNG"
   "MapleStory_2/image/y.gif"
+  "MapleStory_2/images/attack.png"
+  "MapleStory_2/images/attack_runing.png"
   "MapleStory_2/images/player.png"
   "MapleStory_2/images/player_left.png"
 )

@@ -1,0 +1,169 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-e951196cb0d8431c65c0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "MapleStory_2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-074d87a5ea9b2c2aa063.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-d4b11d053b24f2f69cc8.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-b08a4fdf19b18503df44.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-5833244a6c4fb6ae3efb.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMapleStory_2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMapleStory_2-Debug-d649f7da65b85f17abfb.json",
+					"name" : "appMapleStory_2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMapleStory_2_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMapleStory_2_autogen-Debug-cbcfc0cccec61b7a9e5e.json",
+					"name" : "appMapleStory_2_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMapleStory_2_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMapleStory_2_autogen_timestamp_deps-Debug-849ae512983bae8baf30.json",
+					"name" : "appMapleStory_2_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMapleStory_2_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMapleStory_2_qmlimportscan-Debug-46a20f7cc8b54f375a01.json",
+					"name" : "appMapleStory_2_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMapleStory_2_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMapleStory_2_qmllint-Debug-5c12bfeed84233aae2f2.json",
+					"name" : "appMapleStory_2_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMapleStory_2_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMapleStory_2_qmllint_json-Debug-cb3a21dede435db27bc2.json",
+					"name" : "appMapleStory_2_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMapleStory_2_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMapleStory_2_qmllint_module-Debug-5440607ffee4f303ff0f.json",
+					"name" : "appMapleStory_2_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMapleStory_2_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMapleStory_2_qmltyperegistration-Debug-58d2d48e81d31a32bfb2.json",
+					"name" : "appMapleStory_2_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMapleStory_2_tooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMapleStory_2_tooling-Debug-36467bc0dd23abd14d9a.json",
+					"name" : "appMapleStory_2_tooling",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/root/Qt creater/ MapleStory/build/Desktop_Qt_6_7_1-Debug",
+		"source" : "/root/Qt creater/ MapleStory"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

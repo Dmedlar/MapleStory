@@ -1,0 +1,137 @@
+{
+    "classes": [
+        {
+            "className": "Bullet",
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "x",
+                            "type": "qreal"
+                        },
+                        {
+                            "name": "y",
+                            "type": "qreal"
+                        },
+                        {
+                            "name": "direction",
+                            "type": "qreal"
+                        }
+                    ],
+                    "name": "fire",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "getX",
+                    "returnType": "qreal"
+                },
+                {
+                    "access": "public",
+                    "name": "getY",
+                    "returnType": "qreal"
+                },
+                {
+                    "access": "public",
+                    "name": "getDirection",
+                    "returnType": "qreal"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "x",
+                            "type": "qreal"
+                        }
+                    ],
+                    "name": "setX",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "y",
+                            "type": "qreal"
+                        }
+                    ],
+                    "name": "setY",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "direction",
+                            "type": "qreal"
+                        }
+                    ],
+                    "name": "setDirection",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "x",
+                    "read": "getX",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "qreal",
+                    "user": false,
+                    "write": "setX"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "y",
+                    "read": "getY",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "qreal",
+                    "user": false,
+                    "write": "setY"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "direction",
+                    "read": "getDirection",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "qreal",
+                    "user": false,
+                    "write": "setDirection"
+                }
+            ],
+            "qualifiedClassName": "Bullet",
+            "slots": [
+                {
+                    "access": "private",
+                    "name": "updatePosition",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "bullet.h",
+    "outputRevision": 68
+}

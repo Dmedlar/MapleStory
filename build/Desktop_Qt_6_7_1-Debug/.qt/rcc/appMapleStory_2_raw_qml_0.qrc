@@ -45,6 +45,8 @@
     <file alias="image/shopDialog.png">/root/Qt creater/ MapleStory/image/shopDialog.png</file>
     <file alias="images/player.png">/root/Qt creater/ MapleStory/images/player.png</file>
     <file alias="images/player_left.png">/root/Qt creater/ MapleStory/images/player_left.png</file>
+    <file alias="images/attack.png">/root/Qt creater/ MapleStory/images/attack.png</file>
+    <file alias="images/attack_runing.png">/root/Qt creater/ MapleStory/images/attack_runing.png</file>
   </qresource>
 </RCC>
 
