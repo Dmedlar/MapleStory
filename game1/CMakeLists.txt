@@ -253,7 +253,6 @@ qt_add_qml_module(
   images/Obj_dungeon.img.blueCave.set2.16.0.png
   images/Obj_dungeon.img.blueCave.set4.4.0.png
   QML_FILES
-  Components.qml
   QML_FILES
   Characters.qml
   RESOURCES
@@ -278,7 +277,32 @@ qt_add_qml_module(
   part1/image225.png
   part1/image227.png
   part1/image229.png
-  part1/image232.png)
+  part1/image232.png
+  RESOURCES
+  part1/Obj_acc4.img.toyCastle.pet.11.0.png
+  part1/Obj_acc4.img.toyCastle.pet.12.0.png
+  part1/Obj_acc4.img.toyCastle.pet.13.0.png
+  part1/Obj_acc4.img.toyCastle.pet.14.0.png
+  part1/Obj_acc4.img.toyCastle.pet.15.0.png
+  part1/Obj_acc4.img.toyCastle.pet.16.0.png
+  part1/Obj_acc4.img.toyCastle.pet.17.0.png
+  part1/Obj_acc4.img.toyCastle.pet.18.0.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.0.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.1.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.2.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.3.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.4.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.5.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.6.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.7.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.8.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.9.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.10.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.11.png
+  RESOURCES part1/stand_green.png part1/stand_pink.png
+  RESOURCES part1/background3.png
+  RESOURCES part1/image143.png part1/image145.png part1/image147.png part1/image149.png part1/image151.png part1/image153.png
+  RESOURCES part1/image156.png)
 
 target_compile_features(appgame1 PRIVATE cxx_std_20)
 

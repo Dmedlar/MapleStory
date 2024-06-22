@@ -56,10 +56,857 @@ Item {
     ]
     property int currentIndex2: 0
 
+    property var images3:[
+        "part1/image143.png",
+        "part1/image145.png",
+        "part1/image147.png",
+        "part1/image149.png",
+        "part1/image151.png",
+        "part1/image153.png"
+    ]
+    property int currentIndex3:0
+    /*第一关边缘气泡动画*/
+    // property var images3:[
+    //     "part1/Obj_acc6.img.cokeTown.acc1.11.0.png",
+    //     "part1/Obj_acc6.img.cokeTown.acc1.11.2.png",
+    //     "part1/Obj_acc6.img.cokeTown.acc1.11.3.png",
+    //     "part1/Obj_acc6.img.cokeTown.acc1.11.4.png",
+    //     "part1/Obj_acc6.img.cokeTown.acc1.11.5.png",
+    //     "part1/Obj_acc6.img.cokeTown.acc1.11.6.png",
+    //     "part1/Obj_acc6.img.cokeTown.acc1.11.7.png",
+    //     "part1/Obj_acc6.img.cokeTown.acc1.11.8.png",
+    //     "part1/Obj_acc6.img.cokeTown.acc1.11.9.png",
+    //     "part1/Obj_acc6.img.cokeTown.acc1.11.10.png",
+    //     "part1/Obj_acc6.img.cokeTown.acc1.11.11.png"
+
+    // ]
+    // property int currentIndex3:0
+
     Component.onCompleted: {
         rightLeftAnimation.start()
         upDownAnimation.start()
+        // var imageInstance1=_cokeImage.createObject(parent,{"x":10,"y":800})
             }
+    /*关卡1 组件*/
+    Component{
+        id:_cokeImage
+        Item {
+            width: 60
+            height: 800
+
+            Image {
+                id: stand_pink_top
+                width: 55
+                height: 84
+                x:stand_pink_left.x+11
+                y:stand_pink_left.y-stand_pink.height*8-stand_pink_top.height
+                source: "part1/Obj_acc4.img.toyCastle.pet.11.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right.x
+                y:stand_pink_left.y-stand_pink.height*8
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right.x
+                y:stand_pink_left.y-stand_pink.height*7
+                source: "part1/Obj_acc4.img.toyCastle.pet.12.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right.x
+                y:stand_pink_left.y-stand_pink.height*6
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right.x
+                y:stand_pink_left.y-stand_pink.height*5
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right.x
+                y:stand_pink_left.y-stand_pink.height*4
+                source: "part1/Obj_acc4.img.toyCastle.pet.12.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right.x
+                y:stand_pink_left.y-stand_pink.height*3
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right.x
+                y:stand_pink_left.y-stand_pink.height*2
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right.x
+                y:stand_pink_left.y-stand_pink.height
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                id: stand_pink_left
+                width: 46
+                height: 38
+                x:stand_pink.x-31
+                y:stand_pink.y-stand_pink_left.height
+                source: "part1/Obj_acc4.img.toyCastle.pet.13.0.png"
+            }
+            Image {
+                id: stand_pink
+                width: 46
+                height: 38
+                x:stand_pink_right.x
+                y:stand_pink_right.y-stand_pink.height*4
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right.x
+                y:stand_pink_right.y-stand_pink.height*3
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right.x
+                y:stand_pink_right.y-stand_pink.height*2
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right.x
+                y:stand_pink_right.y-stand_pink.height
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                id: stand_pink_right
+                width: 46
+                height: 38
+                x:stand_pink_bottom.x+4
+                y:stand_pink_bottom.y-stand_pink.height*3-stand_pink_right.height
+                source: "part1/Obj_acc4.img.toyCastle.pet.12.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right.x
+                y:stand_pink_bottom.y-stand_pink.height*3
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right.x
+                y:stand_pink_bottom.y-stand_pink.height*2
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right.x
+                y: stand_pink_bottom.y-stand_pink.height
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                id: stand_pink_bottom
+                width:24
+                height:38
+                x:100
+                y:800
+                source: "part1/Obj_acc4.img.toyCastle.pet.14.0.png"
+            }
+        }
+    }
+    Component{
+        id:_cokeImage2
+        Item {
+            width: 60
+            height: 1000
+            Image {
+                id: stand_green_top
+                width: 55
+                height: 84
+                x:stand_green_left.x-20
+                y:stand_green_left.y-stand_green.height*8-stand_green_top.height
+                source: "part1/Obj_acc4.img.toyCastle.pet.15.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right.x
+                y:stand_green_left.y-stand_green.height*8
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right.x
+                y:stand_green_left.y-stand_green.height*7
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right.x
+                y:stand_green_left.y-stand_green.height*6
+                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right.x-31
+                y:stand_green_left.y-stand_green.height*5
+                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right.x
+                y:stand_green_left.y-stand_green.height*4
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right.x
+                y:stand_green_left.y-stand_green.height*3
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right.x-31
+                y:stand_green_left.y-stand_green.height*2
+                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right.x
+                y:stand_green_left.y-stand_green.height
+                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+            }
+            Image {
+                id: stand_green_left
+                width: 46
+                height: 38
+                x:stand_green.x
+                y:stand_green.y-stand_green_left.height
+                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+            }
+            Image {
+                id: stand_green
+                width: 46
+                height: 38
+                x:stand_green_right.x
+                y:stand_green_right.y-stand_green.height*4
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right.x
+                y:stand_green_right.y-stand_green.height*3
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right.x-31
+                y:stand_green_right.y-stand_green.height*2
+                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right.x
+                y:stand_green_right.y-stand_green.height
+                source: "part1/stand_green.png"
+            }
+            Image {
+                id: stand_green_right
+                width: 46
+                height: 38
+                x:stand_green_bottom.x+4
+                y:stand_green_bottom.y-stand_green.height*3-stand_green_right.height
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right.x
+                y:stand_green_bottom.y-stand_green.height*3
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right.x
+                y:stand_green_bottom.y-stand_green.height*2
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right.x
+                y: stand_green_bottom.y-stand_green.height
+                source: "part1/stand_green.png"
+            }
+            Image {
+                id: stand_green_bottom
+                width:24
+                height:38
+                x:200
+                y:800
+                source: "part1/Obj_acc4.img.toyCastle.pet.18.0.png"
+            }
+
+        }
+    }
+    Component{
+        id:_cokeImage3
+        Item {
+            width: 60
+            height: 1000
+            Image {
+                id: stand_green_top1
+                width: 55
+                height: 84
+                x:stand_green_left1.x-20
+                y:stand_green_left1.y-stand_green1.height*11-stand_green_top1.height
+                source: "part1/Obj_acc4.img.toyCastle.pet.15.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x
+                y:stand_green_left1.y-stand_green1.height*11
+                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x
+                y:stand_green_left1.y-stand_green1.height*10
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x
+                y:stand_green_left1.y-stand_green1.height*9
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x
+                y:stand_green_left1.y-stand_green1.height*8
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x
+                y:stand_green_left1.y-stand_green1.height*7
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x
+                y:stand_green_left1.y-stand_green1.height*6
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x
+                y:stand_green_left1.y-stand_green1.height*5
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x
+                y:stand_green_left1.y-stand_green1.height*4
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x
+                y:stand_green_left1.y-stand_green1.height*3
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x-31
+                y:stand_green_left1.y-stand_green1.height*2
+                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x
+                y:stand_green_left1.y-stand_green1.height
+                source: "part1/stand_green.png"
+            }
+            Image {
+                id: stand_green_left1
+                width: 46
+                height: 38
+                x:stand_green1.x
+                y:stand_green1.y-stand_green_left1.height
+                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+            }
+            Image {
+                id: stand_green1
+                width: 46
+                height: 38
+                x:stand_green_right1.x
+                y:stand_green_right1.y-stand_green1.height*4
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x
+                y:stand_green_right1.y-stand_green1.height*3
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x-31
+                y:stand_green_right1.y-stand_green1.height*2
+                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x
+                y:stand_green_right1.y-stand_green1.height
+                source: "part1/stand_green.png"
+            }
+            Image {
+                id: stand_green_right1
+                width: 46
+                height: 38
+                x:stand_green_bottom1.x+4
+                y:stand_green_bottom1.y-stand_green1.height*3-stand_green_right1.height
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x
+                y:stand_green_bottom1.y-stand_green1.height*3
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x
+                y:stand_green_bottom1.y-stand_green1.height*2
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right1.x
+                y: stand_green_bottom1.y-stand_green1.height
+                source: "part1/stand_green.png"
+            }
+            Image {
+                id: stand_green_bottom1
+                width:24
+                height:38
+                x:300
+                y:950
+                source: "part1/Obj_acc4.img.toyCastle.pet.18.0.png"
+            }
+        }
+    }
+    Component{
+        id:_cokeImage4
+        Item {
+            width: 60
+            height: 1000
+            Image {
+                id: stand_pink_top1
+                width: 55
+                height: 84
+                x:stand_pink_left1.x+11
+                y:stand_pink_left1.y-stand_pink1.height*15-stand_pink_top1.height
+                source: "part1/Obj_acc4.img.toyCastle.pet.11.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_left1.y-stand_pink1.height*15
+                source: "part1/Obj_acc4.img.toyCastle.pet.12.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x-31
+                y:stand_pink_left1.y-stand_pink1.height*14
+                source: "part1/Obj_acc4.img.toyCastle.pet.13.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_left1.y-stand_pink1.height*13
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_left1.y-stand_pink1.height*12
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x-31
+                y:stand_pink_left1.y-stand_pink1.height*11
+                source: "part1/Obj_acc4.img.toyCastle.pet.13.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_left1.y-stand_pink1.height*10
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_left1.y-stand_pink1.height*9
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_left1.y-stand_pink1.height*8
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_left1.y-stand_pink1.height*7
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_left1.y-stand_pink1.height*6
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_left1.y-stand_pink1.height*5
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_left1.y-stand_pink1.height*4
+                source: "part1/Obj_acc4.img.toyCastle.pet.12.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_left1.y-stand_pink1.height*3
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_left1.y-stand_pink1.height*2
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_left1.y-stand_pink1.height
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                id: stand_pink_left1
+                width: 46
+                height: 38
+                x:stand_pink1.x-31
+                y:stand_pink1.y-stand_pink_left1.height
+                source: "part1/Obj_acc4.img.toyCastle.pet.13.0.png"
+            }
+            Image {
+                id: stand_pink1
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_right1.y-stand_pink1.height*4
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_right1.y-stand_pink1.height*3
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_right1.y-stand_pink1.height*2
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_right1.y-stand_pink1.height
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                id: stand_pink_right1
+                width: 46
+                height: 38
+                x:stand_pink_bottom1.x+4
+                y:stand_pink_bottom1.y-stand_pink1.height*3-stand_pink_right1.height
+                source: "part1/Obj_acc4.img.toyCastle.pet.12.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_bottom1.y-stand_pink1.height*3
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y:stand_pink_bottom1.y-stand_pink1.height*2
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_pink_right1.x
+                y: stand_pink_bottom1.y-stand_pink1.height
+                source: "part1/stand_pink.png"
+            }
+            Image {
+                id: stand_pink_bottom1
+                width:24
+                height:38
+                x:400
+                y:1000
+                source: "part1/Obj_acc4.img.toyCastle.pet.14.0.png"
+            }
+        }
+    }
+    Component{
+        id:_cokeImage5
+        Item {
+            width: 60
+            height: 1000
+            Image {
+                id: stand_green_top2
+                width: 55
+                height: 84
+                x:stand_green_left2.x-20
+                y:stand_green_left2.y-stand_green2.height*11-stand_green_top2.height
+                source: "part1/Obj_acc4.img.toyCastle.pet.15.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x
+                y:stand_green_left2.y-stand_green2.height*11
+                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x-31
+                y:stand_green_left2.y-stand_green2.height*10
+                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x
+                y:stand_green_left2.y-stand_green2.height*9
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x
+                y:stand_green_left2.y-stand_green2.height*8
+                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x
+                y:stand_green_left2.y-stand_green2.height*7
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x
+                y:stand_green_left2.y-stand_green2.height*6
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x
+                y:stand_green_left2.y-stand_green2.height*5
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x
+                y:stand_green_left2.y-stand_green2.height*4
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x
+                y:stand_green_left2.y-stand_green2.height*3
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x-31
+                y:stand_green_left2.y-stand_green2.height*2
+                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x
+                y:stand_green_left2.y-stand_green2.height
+                source: "part1/stand_green.png"
+            }
+            Image {
+                id: stand_green_left2
+                width: 46
+                height: 38
+                x:stand_green2.x
+                y:stand_green2.y-stand_green_left2.height
+                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+            }
+            Image {
+                id: stand_green2
+                width: 46
+                height: 38
+                x:stand_green_right2.x
+                y:stand_green_right2.y-stand_green2.height*4
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x
+                y:stand_green_right2.y-stand_green2.height*3
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x-31
+                y:stand_green_right2.y-stand_green2.height*2
+                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x
+                y:stand_green_right2.y-stand_green2.height
+                source: "part1/stand_green.png"
+            }
+            Image {
+                id: stand_green_right2
+                width: 46
+                height: 38
+                x:stand_green_bottom2.x+4
+                y:stand_green_bottom2.y-stand_green2.height*3-stand_green_right2.height
+                source: "part1/stand_green.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x-31
+                y:stand_green_bottom2.y-stand_green2.height*3
+                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x
+                y:stand_green_bottom2.y-stand_green2.height*2
+                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+            }
+            Image {
+                width: 46
+                height: 38
+                x:stand_green_right2.x
+                y: stand_green_bottom2.y-stand_green2.height
+                source: "part1/stand_green.png"
+            }
+            Image {
+                id: stand_green_bottom2
+                width:24
+                height:38
+                x:500
+                y:800
+                source: "part1/Obj_acc4.img.toyCastle.pet.18.0.png"
+            }
+
+        }
+    }
     /*关卡选择界面*/
     Page{
         id:_choose
@@ -188,6 +1035,7 @@ Item {
         id:_page0
         visible: false
 
+
         Rectangle{
             id:gameScene
             width: 1200
@@ -200,6 +1048,23 @@ Item {
                     source: "music/Bgm01.img.BadGuys.mp3" // 使用本地资源
                     loops: MediaPlayer.Infinite // 无限循环播放
                 }
+            // Image {
+            //     width:250*5
+            //     height:162*5
+            //     anchors.centerIn: parent
+            //     id: coke
+            //     z:1
+            //     source:images[currentIndex3]
+            // }
+            // Timer{
+            //     interval: 200
+            //     running:true
+            //     repeat: true
+            //     onTriggered: {
+            //         currentIndex3=(currentIndex3+1)%images3.length//循环每张图
+            //         coke.source=images3[currentIndex3]
+            //     }
+            // }
 
             /*背景图片*/
             Image {
@@ -207,43 +1072,123 @@ Item {
                 height:800
                 width:2258
                 x:0
-                source: "image/background1.png"
+                source: "part1/background3.png"
 
-                Image {
-                    id: background0B
-                    height:800
-                    width:2258
-                    x:background0.width
-                    source: "image/background1.png"
+                Loader{
+                    sourceComponent: _cokeImage
+                    x:500
+                    y:-50
                 }
-                /*npc1的图像动画*/
-                Image {
-                    id: _npc1
-                    source: images2[currentIndex2]
-                    width: 63
-                    height: 74
-                    y:-100
+                Loader{
+                    sourceComponent: _cokeImage
+                    x:0
+                    y:0
+                }
+                Loader{
+                    sourceComponent: _cokeImage2
+                    x:0
+                    y:0
+                }
+                Loader{
+                    sourceComponent: _cokeImage3
+                    x:0
+                    y:0
+                }
+                Loader{
+                    sourceComponent: _cokeImage4
+                    x:0
+                    y:0
+                }
+                Loader{
+                    sourceComponent: _cokeImage5
+                    x:0
+                    y:0
+                }
+                Loader{
+                    sourceComponent: _cokeImage5
+                    x:200
+                    y:300
+                }
+                Loader{
+                    sourceComponent: _cokeImage2
+                    x:600
+                    y:0
+                }
+                Loader{
+                    sourceComponent: _cokeImage4
+                    x:500
+                    y:400
+                }
+                Loader{
+                    sourceComponent: _cokeImage2
                     x:800
-                }
-                NumberAnimation{
-                    id:_npc1Fall
-                    target: _npc1
-                    property: "y"
-                    to:705
-                    duration: 3000
-                    easing.type: Easing.InOutQuad
+                    y:200
                 }
 
+                Image {
+                    id: _npc2
+                    source: images3[currentIndex3]
+                    width: 57
+                    height:52
+                    x:600
+                    y:400
+                }
                 Timer{
-                    id:_npc1Timer
                     interval: 200
-                    running: true
+                    running:true
                     repeat: true
                     onTriggered: {
-                        currentIndex2=(currentIndex2+1)%images2.length//循环每张图
-                        _npc1.source=images2[currentIndex2]
+                        currentIndex3=(currentIndex3+1)%images3.length//循环每张图
+                        _npc2.source=images3[currentIndex3]
                     }
                 }
+
+                Image {
+                    id: _end
+                    source: images1[currentIndex1]
+                    width: 100
+                    height:100
+                    x:1100
+                    y:450
+                }
+                Timer{
+                    interval: 200
+                    running:true
+                    repeat: true
+                    onTriggered: {
+                        currentIndex1=(currentIndex1+1)%images1.length//循环每张图
+                        _end.source=images1[currentIndex1]
+                    }
+                }
+
+                /*npc1的图像动画*/
+                // Image {
+                //     id: _npc1
+                //     source: images2[currentIndex2]
+                //     width: 63
+                //     height: 74
+                //     y:-100
+                //     x:800
+                // }
+                // NumberAnimation{
+                //     id:_npc1Fall
+                //     target: _npc1
+                //     property: "y"
+                //     to:705
+                //     duration: 3000
+                //     easing.type: Easing.InOutQuad
+                // }
+
+                // Timer{
+                //     id:_npc1Timer
+                //     interval: 200
+                //     running: true
+                //     repeat: true
+                //     onTriggered: {
+                //         currentIndex2=(currentIndex2+1)%images2.length//循环每张图
+                //         _npc1.source=images2[currentIndex2]
+                //     }
+                // }
 
                 // function chasePlayer() {
                 //         var direction = player.x - _npc1.x;
@@ -279,47 +1224,9 @@ Item {
                 height: 50
                 color: "red"
                 radius: 25 // 使角色为圆形
-                y:300
-                x:0
-                property int i:0
-                        // 触发屏幕滚动
-                        onXChanged: {
-                            if(player.x>150){
-                                for(i;i<1;i++){
-                                  _npc1Fall.start()
-                                }
-                            }
+                y:438
+                x:75
 
-
-                            // 如果角色到达场景边缘的阈值
-                            if (player.x + width >scrollThreshold && player.x + width < sceneWidth) {
-                                // 移动场景内容（背景和角色）
-                                var scrollDistance = player.x + width - scrollThreshold;
-                                background0.x -= scrollDistance;
-                                player.x=gameScene.width*0.8-player.width
-                                if (background0.x <= -background0.width) {
-                                                    background0.x += background0.width;
-                                                }
-                                                if (background0.x >= background0.width) {
-                                                    background0.x -= background0.width;
-                                                }
-                            }
-                        }
-                        MouseArea {
-                                    id: dragArea
-                                    anchors.fill: parent
-                                    drag.target: parent
-                                }
-                        // 使角色可以通过水平拖拽移动
-                        Drag.active: dragArea.drag.active
-                        Drag.hotSpot.x: player.width / 2
-                        Drag.hotSpot.y: player.height / 2
-                        Drag.onActiveChanged: {
-                            if (!dragArea.drag.active) {
-                                x = player.x
-                                y = player.y
-                            }
-                        }
                 }
         }
 
