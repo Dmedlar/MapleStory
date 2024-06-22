@@ -289,9 +289,68 @@ qt_add_qml_module(
   images/Obj_dungeon2.img.deepSee.nature.7.4.png
   images/Obj_dungeon2.img.deepSee.nature.7.3.png
   images/Obj_dungeon2.img.deepSee.nature.7.5.png
-  RESOURCES images/Obj_acc3.img.skyStation.cloud.9.0.png images/Obj_acc3.img.skyStation.cloud.10.0.png images/Obj_acc3.img.skyStation.cloud.11.0.png images/Obj_acc3.img.skyStation.cloud.12.0.png images/Obj_acc3.img.skyStation.cloud.13.0.png images/Obj_acc3.img.skyStation.cloud.14.0.png images/Obj_acc3.img.skyStation.cloud.15.0.png images/Obj_acc6.img.folkvillige.nature.23.1.png images/Obj_acc6.img.folkvillige.nature.24.0.png images/sun.png
-  RESOURCES images/Obj_acc1.img.grassySoil.space.17.0.png images/Obj_acc1.img.grassySoil.space.17.1.png images/Obj_acc1.img.grassySoil.space.17.2.png
-  RESOURCES images/Obj_acc3.img.christmas.inside.12.0.png images/Obj_acc3.img.christmas.inside.12.1.png images/Obj_acc3.img.christmas.inside.12.2.png images/Obj_acc3.img.christmas.inside.12.3.png images/Obj_acc3.img.christmas.inside.12.4.png images/Obj_acc3.img.christmas.inside.12.5.png images/Obj_acc3.img.christmas.inside.12.6.png images/Obj_acc3.img.christmas.inside.12.7.png images/Obj_acc3.img.christmas.inside.12.8.png images/Obj_acc3.img.christmas.inside.12.9.png images/Obj_acc3.img.christmas.inside.12.10.png images/Obj_acc3.img.christmas.inside.12.11.png)
+  RESOURCES
+  images/Obj_acc3.img.skyStation.cloud.9.0.png
+  images/Obj_acc3.img.skyStation.cloud.10.0.png
+  images/Obj_acc3.img.skyStation.cloud.11.0.png
+  images/Obj_acc3.img.skyStation.cloud.12.0.png
+  images/Obj_acc3.img.skyStation.cloud.13.0.png
+  images/Obj_acc3.img.skyStation.cloud.14.0.png
+  images/Obj_acc3.img.skyStation.cloud.15.0.png
+  images/Obj_acc6.img.folkvillige.nature.23.1.png
+  images/Obj_acc6.img.folkvillige.nature.24.0.png
+  images/sun.png
+  RESOURCES
+  images/Obj_acc1.img.grassySoil.space.17.0.png
+  images/Obj_acc1.img.grassySoil.space.17.1.png
+  images/Obj_acc1.img.grassySoil.space.17.2.png
+  RESOURCES
+  images/Obj_acc3.img.christmas.inside.12.0.png
+  images/Obj_acc3.img.christmas.inside.12.1.png
+  images/Obj_acc3.img.christmas.inside.12.2.png
+  images/Obj_acc3.img.christmas.inside.12.3.png
+  images/Obj_acc3.img.christmas.inside.12.4.png
+  images/Obj_acc3.img.christmas.inside.12.5.png
+  images/Obj_acc3.img.christmas.inside.12.6.png
+  images/Obj_acc3.img.christmas.inside.12.7.png
+  images/Obj_acc3.img.christmas.inside.12.8.png
+  images/Obj_acc3.img.christmas.inside.12.9.png
+  images/Obj_acc3.img.christmas.inside.12.10.png
+  images/Obj_acc3.img.christmas.inside.12.11.png
+  part1/Obj_acc4.img.toyCastle.pet.11.0.png
+  part1/Obj_acc4.img.toyCastle.pet.12.0.png
+  part1/Obj_acc4.img.toyCastle.pet.13.0.png
+  part1/Obj_acc4.img.toyCastle.pet.14.0.png
+  part1/Obj_acc4.img.toyCastle.pet.15.0.png
+  part1/Obj_acc4.img.toyCastle.pet.16.0.png
+  part1/Obj_acc4.img.toyCastle.pet.17.0.png
+  part1/Obj_acc4.img.toyCastle.pet.18.0.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.0.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.1.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.2.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.3.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.4.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.5.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.6.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.7.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.8.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.9.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.10.png
+  part1/Obj_acc6.img.cokeTown.acc1.11.11.png
+  RESOURCES
+  part1/stand_green.png
+  part1/stand_pink.png
+  RESOURCES
+  part1/background3.png
+  RESOURCES
+  part1/image143.png
+  part1/image145.png
+  part1/image147.png
+  part1/image149.png
+  part1/image151.png
+  part1/image153.png
+  RESOURCES
+  part1/image156.png)
 
 target_compile_features(appgame1 PRIVATE cxx_std_20)
 
