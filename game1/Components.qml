@@ -48,7 +48,65 @@ Item {
     "images/Obj_dungeon.img.metroSubway.acc.20.11.png",
     ]
     property int currentIndex1:0
-   //第一关怪物动画
+    //法阵
+    property var circle:[
+    "images/Obj_dungeon2.img.toyCastle2.gate.6.0.png",
+        "images/Obj_dungeon2.img.toyCastle2.gate.6.1.png",
+        "images/Obj_dungeon2.img.toyCastle2.gate.6.2.png",
+        "images/Obj_dungeon2.img.toyCastle2.gate.6.0.png",
+    ]
+    property int  circleIndex: 0
+    //星星
+    Component{
+        id:skylight
+        Item{
+    property var light: [
+    "images/Obj_acc6.img.folkvillige.nature.24.0.png",
+    "images/Obj_acc6.img.folkvillige.nature.23.1.png",
+    ]
+    property int lightIndex: 0
+            Image {
+                id: light0
+                source: light[lightIndex]
+                width: 33
+                height: 29
+            }
+            Timer{
+            id:lightTimer
+            interval: 300
+            running: true
+            repeat: true
+            onTriggered: {
+                lightIndex=(lightIndex+1)%light.length//循环每张图
+                light0.source=light[lightIndex]
+            }
+            }
+        }
+    }
+    //喷泉
+    property var water: [
+    "images/Obj_acc1.img.grassySoil.space.17.0.png",
+    "images/Obj_acc1.img.grassySoil.space.17.1.png",
+    "images/Obj_acc1.img.grassySoil.space.17.2.png",
+    ]
+    property int waterIndex: 0
+    //火炉
+    property var fire: [
+    "images/Obj_acc3.img.christmas.inside.12.0.png",
+        "images/Obj_acc3.img.christmas.inside.12.1.png",
+        "images/Obj_acc3.img.christmas.inside.12.2.png",
+        "images/Obj_acc3.img.christmas.inside.12.3.png",
+        "images/Obj_acc3.img.christmas.inside.12.4.png",
+        "images/Obj_acc3.img.christmas.inside.12.5.png",
+        "images/Obj_acc3.img.christmas.inside.12.6.png",
+        "images/Obj_acc3.img.christmas.inside.12.7.png",
+        "images/Obj_acc3.img.christmas.inside.12.8.png",
+        "images/Obj_acc3.img.christmas.inside.12.9.png",
+        "images/Obj_acc3.img.christmas.inside.12.10.png",
+        "images/Obj_acc3.img.christmas.inside.12.11.png",
+    ]
+    property int fireIndex: 0
+    //第一关怪物动画
     property var images2:[
         "part1/image133.png",
         "part1/image135.png",
@@ -59,6 +117,8 @@ Item {
     Component.onCompleted: {
         rightLeftAnimation.start()
         upDownAnimation.start()
+        rightLeftAnimation1.start()
+        upDownAnimation1.start()
             }
     /*关卡选择界面*/
     Page{
@@ -576,40 +636,61 @@ Item {
                     Image {
                         id: cloud0
                         source: "images/cloud.png"
-                        width: background2.width
+                        width: background2B.width
                         height: background2.height
                         opacity: 0.7
                         fillMode: Image.PreserveAspectCrop
+                    }
+                    Image {
+                        id: clouds
+                        source: "images/clouds.png"
+                        width: 1200
+                        height: 640
+                        y:-200
                     }
                 }
                 Image {
                     id: background2C
                     x:parent.width*2
-                    width:1200
+                    width:1300
                     height: 900
                     source: "images/sky1.jpg"
                     Image {
                         id: cloud1
                         source: "images/cloud.png"
-                        width: background2.width
+                        width: background2B.width
                         height: background2.height
                         opacity: 0.7
                         fillMode: Image.PreserveAspectCrop
+                    }
+                    Image {
+                        id: clouds1
+                        source: "images/clouds.png"
+                        width: 1200
+                        height: 640
+                        y:-200
                     }
                 }
                 Image {
                     id: background2D
                     x:parent.width*3
-                    width:1200
+                    width:1300
                     height: 900
                     source: "images/sky3.jpg"
                     Image {
                         id: cloud2
                         source: "images/cloud.png"
-                        width: background2.width
+                        width: background2B.width
                         height: background2.height
                         opacity: 0.7
                         fillMode: Image.PreserveAspectCrop
+                    }
+                    Image {
+                        id: clouds2
+                        source: "images/clouds2.png"
+                        width: 1200
+                        height: 640
+                        y:-200
                     }
                 }
                 Image {
@@ -621,10 +702,17 @@ Item {
                     Image {
                         id: cloud3
                         source: "images/cloud.png"
-                        width: background2.width
+                        width: background2B.width
                         height: background2.height
                         opacity: 0.7
                         fillMode: Image.PreserveAspectCrop
+                    }
+                    Image {
+                        id: clouds3
+                        source: "images/clouds2.png"
+                        width: 1200
+                        height: 640
+                        y:-200
                     }
                 }
                 Image {
@@ -654,6 +742,32 @@ Item {
                         _Inter.source=images1[currentIndex1]
                     }
                }
+                Image {
+                    id: _Inter1
+                    source: circle[circleIndex]
+                    width: 150
+                    height: 150
+                    x:50
+                    y:430
+                    z:2
+                }
+                Timer{
+                    id:_circleTimer
+                    interval: 100
+                    running: true
+                    repeat: true
+                    onTriggered: {
+                        circleIndex=(circleIndex+1)%circle.length//循环每张图
+                        _Inter1.source=circle[circleIndex]
+                    }
+               }
+                Image {
+                    id: clouds0
+                    source: "images/clouds.png"
+                    width: 1200
+                    height: 640
+                    y:-200
+                }
                 Image{
                 id:toydoor
                 source: "images/toydoor.png"
@@ -662,6 +776,14 @@ Item {
                 x:-10
                 y:_Inter.y-80
                 z:_Inter
+                }
+                Image {
+                    id: berg
+                    source: "images/berg.png"
+                    width: 127
+                    height: 245
+                    x:toydoor.x+toydoor.width
+                    y:toydoor.y+70
                 }
                 Image {
                     id: road
@@ -704,6 +826,16 @@ Item {
                     fillMode: Image.PreserveAspectCrop
                 }
                 Image {
+                    id: sun
+                    source: "images/sun.png"
+                    width: 106
+                    height: 105
+                    y:200
+                    x:road3.x
+                    z:2
+                    fillMode: Image.PreserveAspectCrop
+                }
+                Image {
                     id: road4
                     source: "images/toycloud3.png"
                     width: 224
@@ -712,6 +844,16 @@ Item {
                     x:road3.x+200
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
+                }
+                Loader{
+                sourceComponent: skylight
+                y:road4.y-90
+                x:road4.x-50
+                }
+                Loader{
+                sourceComponent: skylight
+                y:road4.y-210
+                x:road4.x+100
                 }
                 Image {
                     id: road5
@@ -734,6 +876,21 @@ Item {
                     fillMode: Image.PreserveAspectCrop
                 }
                 Image {
+                    id: road0
+                    source: "images/toycloud5.png"
+                    width: 127
+                    height: 86
+                    y:road6.y-180
+                    x:road6.x
+                    z:_Inter
+                    fillMode: Image.PreserveAspectCrop
+                }
+                Loader{
+                sourceComponent: skylight
+                y:road6.y-100
+                x:road6.x
+                }
+                Image {
                     id: road7
                     source: "images/toycloud1.png"
                     width: 127
@@ -751,6 +908,11 @@ Item {
                 y:road2.y-150
                 x:road7.x+122
                 fillMode: Image.PreserveAspectCrop
+                }
+                Loader{
+                sourceComponent: skylight
+                y:ladder.y-100
+                x:ladder.x+50
                 }
                 Image {
                     id: road8
@@ -772,6 +934,11 @@ Item {
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
                 }
+                Loader{
+                sourceComponent: skylight
+                y:road9.y-50
+                x:road9.x
+                }
                 Image {
                     id: road10
                     source: "images/toycloud5.png"
@@ -781,6 +948,11 @@ Item {
                     x:road9.x+100
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
+                }
+                Loader{
+                sourceComponent: skylight
+                y:road10.y-200
+                x:road10.x+50
                 }
                 Image {
                     id: road11
@@ -792,12 +964,17 @@ Item {
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
                 }
+                Loader{
+                sourceComponent: skylight
+                y:road11.y+100
+                x:road11.x+100
+                }
                 Image {
                     id: decorate
                     source: "images/toyCastle.cloud.1.0.png"
                     width: 104
                     height: 66
-                    y:road8.y-150
+                    y:road8.y-160
                     x:road10.x+90
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
@@ -807,7 +984,7 @@ Item {
                     source: "images/toyCastle.cloud.1.0.png"
                     width: 104
                     height: 66
-                    y:road8.y-150
+                    y:road8.y-160
                     x:road10.x-90
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
@@ -821,6 +998,77 @@ Item {
                     x:road11.x+120
                     fillMode: Image.PreserveAspectCrop
                     }
+                Image {
+                    id: berg1
+                    source: "images/bergd.png"
+                    width: 114
+                    height: 167
+                    x:ladder.x+ladder.width-100
+                    y:ladder.y-167
+                }
+                Image {
+                    id: berg2
+                    source: "images/bergd.png"
+                    width: 114
+                    height: 167
+                    x:ladder1.x
+                    y:ladder1.y-167
+                }
+                Loader{
+                sourceComponent: skylight
+                y:ladder1.y+20
+                x:ladder1.x+270
+                }
+                Image {
+                    id: road01
+                    source: "images/toycloud1.png"
+                    width: 127
+                    height: 86
+                    y:decorate.y+120
+                    x:ladder1.x+280
+                    z:_Inter
+                    fillMode: Image.PreserveAspectCrop
+                }
+                Image {
+                    id: road02
+                    source: "images/toycloud5.png"
+                    width: 127
+                    height: 86
+                    y:decorate.y
+                    x:road01.x+100
+                    z:_Inter
+                    fillMode: Image.PreserveAspectCrop
+                }
+                Image {
+                    id: road03
+                    source: "images/toycloud1.png"
+                    width: 127
+                    height: 86
+                    y:decorate.y
+                    x:road02.x+180
+                    z:_Inter
+                    fillMode: Image.PreserveAspectCrop
+                }
+                Image {
+                    id: road04
+                    source: "images/toycloud5.png"
+                    width: 127
+                    height: 86
+                    y:decorate.y
+                    x:road03.x+100
+                    z:_Inter
+                    fillMode: Image.PreserveAspectCrop
+                }
+                Image {
+                    id: road05
+                    source: "images/toycloud1.png"
+                    width: 127
+                    height: 86
+                    y:decorate.y
+                    x:road04.x+150
+                    z:_Inter
+                    fillMode: Image.PreserveAspectCrop
+                }
                 Image{
                     id:stand
                     source:"images/toycloud3.png"
@@ -829,9 +1077,6 @@ Item {
                     x:ladder1.x+299
                     y:road2.y
                 }
-                Component.onCompleted: {
-                    rightLeftAnimation1.start()
-                            }
                 NumberAnimation {
                     id: rightLeftAnimation1
                     target: stand
@@ -860,6 +1105,11 @@ Item {
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
                 }
+                Loader{
+                sourceComponent: skylight
+                y:road12.y-300
+                x:road12.x
+                }
                 Image {
                     id: road13
                     source: "images/toycloud5.png"
@@ -870,6 +1120,24 @@ Item {
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
                 }
+                Image {
+                    id: waterp
+                    source: water[waterIndex]
+                    width: 235
+                    height: 127
+                    x:road13.x+50
+                    y:road13.y-107
+                }
+                Timer{
+                    id:waterTimer
+                    interval: 200
+                    running: true
+                    repeat: true
+                    onTriggered: {
+                        waterIndex=(waterIndex+1)%water.length//循环每张图
+                        waterp.source=water[waterIndex]
+                    }
+               }
                 Image {
                     id: road14
                     source: "images/toycloud1.png"
@@ -889,6 +1157,11 @@ Item {
                     x:road14.x+100
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
+                }
+                Loader{
+                sourceComponent: skylight
+                y:road15.y-200
+                x:road15.x+120
                 }
                 Image {
                     id: step
@@ -910,147 +1183,246 @@ Item {
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
                 }
+                Loader{
+                sourceComponent: skylight
+                y:step1.y+220
+                x:step1.x+50
+                }
                 Image {
                     id: road16
-                    source: "images/toycloud1.png"
-                    width: 127
-                    height: 86
-                    y:step1.y-50
-                    x:step1.x+262
-                    z:_Inter
+                    source: "images/Obj_acc3.img.skyStation.cloud.11.0.png"
+                    width: 300/1.3
+                    height: 164/1.3
+                    y:step1.y-60
+                    x:step1.x+232
+                    z:2
                     fillMode: Image.PreserveAspectCrop
+                }
+                Image {
+                    id: fire1
+                    source: fire[fireIndex]
+                    width: 153*0.6
+                    height: 178*0.6
+                    x:road16.x+20
+                    y:road16.y-98
+                }
+                Timer{
+                id:fireTimer
+                interval: 100
+                running: true
+                repeat: true
+                onTriggered:{
+                fireIndex=(fireIndex+1)%fire.length
+                    fire1.source=fire[fireIndex]
+                }
+                }
+                Image {
+                    id: bad
+                    source: "images/Obj_dungeon.img.blueCave.set2.11.0.png"
+                    width: 61
+                    height: 41
+                    x:road16.x+80
+                    y:-41
+                }
+                NumberAnimation {
+                            id: full_bad
+                            target: bad
+                            properties: "y"
+                            to: road16.y-38
+                            duration: 5000
+                            easing.type: Easing.OutQuad
+                        }
+                Loader{
+                sourceComponent: skylight
+                y:road16.y-50
+                x:road16.x
                 }
                 Image {
                     id: road17
-                    source: "images/toycloud5.png"
-                    width: 127
-                    height: 86
-                    y:road16.y-25
-                    x:road16.x+100
+                    source: "images/Obj_acc3.img.skyStation.cloud.14.0.png"
+                    width: 305
+                    height: 121
+                    y:road16.y
+                    x:road16.x+215
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
+                }
+                Loader{
+                sourceComponent: skylight
+                y:road17.y+190
+                x:road17.x+140
                 }
                 Image {
                     id: road18
-                    source: "images/toycloud1.png"
-                    width: 127
-                    height: 86
-                    y:road16.y-25
-                    x:road17.x+100
+                    source: "images/Obj_acc3.img.skyStation.cloud.14.0.png"
+                    width: 305
+                    height: 121
+                    y:road16.y
+                    x:road17.x+260
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
+                }
+                Loader{
+                sourceComponent: skylight
+                y:road18.y-120
+                x:road18.x+100
                 }
                 Image {
                     id: road19
-                    source: "images/toycloud5.png"
-                    width: 127
-                    height: 86
-                    y:road16.y-25
-                    x:road18.x+100
+                    source: "images/Obj_acc3.img.skyStation.cloud.14.0.png"
+                    width: 305
+                    height: 121
+                    y:road16.y
+                    x:road18.x+260
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
+                }
+                Loader{
+                sourceComponent: skylight
+                y:road19.y+200
+                x:road19.x-30
+                }
+                Loader{
+                sourceComponent: skylight
+                y:road19.y+280
+                x:road19.x+150
                 }
                 Image {
                     id: road20
-                    source: "images/toycloud1.png"
-                    width: 127
-                    height: 86
-                    y:road16.y-25
-                    x:road19.x+100
+                    source: "images/Obj_acc3.img.skyStation.cloud.14.0.png"
+                    width: 305
+                    height: 121
+                    y:road2.y+80
+                    x:road19.x+330
+                    z:_Inter
+                    fillMode: Image.PreserveAspectCrop
+                }
+                Loader{
+                sourceComponent: skylight
+                y:road20.y-420
+                x:road20.x+30
+                }
+                Image {
+                    id: road26
+                    source: "images/Obj_acc3.img.skyStation.cloud.14.0.png"
+                    width: 305
+                    height: 121
+                    y:road16.y
+                    x:road20.x+330
+                    z:_Inter
+                    fillMode: Image.PreserveAspectCrop
+                }
+                NumberAnimation {
+                            id: upDownAnimation1
+                            target: road26
+                            properties: "y"
+                            to: road26.y + 400
+                            duration: 2000
+                            easing.type: Easing.InOutQuad
+                            onFinished: upDownAnimation1_return.start()
+                        }
+                NumberAnimation {
+                            id: upDownAnimation1_return
+                            target: road26
+                            properties: "y"
+                            to: road26.y - 400
+                            duration: 2000
+                            easing.type: Easing.InOutQuad
+                            onFinished:upDownAnimation1.start()
+                        }
+                Image {
+                    id: road28
+                    source: "images/Obj_acc3.img.skyStation.cloud.14.0.png"
+                    width: 305
+                    height: 121
+                    y:road20.y
+                    x:road26.x+320
+                    z:_Inter
+                    fillMode: Image.PreserveAspectCrop
+                }
+                Loader{
+                sourceComponent: skylight
+                y:road28.y-150
+                x:road28.x+100
+                }
+                Image {
+                    id: road29
+                    source: "images/Obj_acc3.img.skyStation.cloud.14.0.png"
+                    width: 305
+                    height: 121
+                    y:road20.y
+                    x:road28.x+260
+                    z:_Inter
+                    fillMode: Image.PreserveAspectCrop
+                }
+                Loader{
+                sourceComponent: skylight
+                y:road29.y-300
+                x:road29.x+100
+                }
+                Image {
+                    id: road30
+                    source: "images/Obj_acc3.img.skyStation.cloud.14.0.png"
+                    width: 305
+                    height: 121
+                    y:road20.y
+                    x:road29.x+260
+                    z:_Inter
+                    fillMode: Image.PreserveAspectCrop
+                }
+                Loader{
+                sourceComponent: skylight
+                y:road30.y-80
+                x:road30.x
+                }
+                Image {
+                    id: road2801
+                    source: "images/Obj_acc3.img.skyStation.cloud.12.0.png"
+                    width: 190
+                    height: 88
+                    y:road20.y-250
+                    x:road26.x+320
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
                 }
                 Image {
-                    id: road21
-                    source: "images/toycloud5.png"
-                    width: 127
-                    height: 86
-                    y:road16.y-25
-                    x:road20.x+100
+                    id: road2802
+                    source: "images/Obj_acc3.img.skyStation.cloud.12.0.png"
+                    width: 190
+                    height: 88
+                    y:road2801.y
+                    x:road2801.x+180
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
                 }
                 Image {
-                    id: road22
-                    source: "images/toycloud1.png"
-                    width: 127
-                    height: 86
-                    y:road16.y-25
-                    x:road21.x+100
+                    id: road2803
+                    source: "images/Obj_acc3.img.skyStation.cloud.12.0.png"
+                    width: 190
+                    height: 88
+                    y:road2801.y
+                    x:road2802.x+180
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
                 }
                 Image {
-                    id: road23
-                    source: "images/toycloud5.png"
-                    width: 127
-                    height: 86
-                    y:road16.y-25
-                    x:road22.x+200
+                    id: road2804
+                    source: "images/Obj_acc3.img.skyStation.cloud.12.0.png"
+                    width: 190
+                    height: 88
+                    y:road2801.y
+                    x:road2803.x+180
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
                 }
                 Image {
-                    id: road24
-                    source: "images/toycloud1.png"
-                    width: 127
-                    height: 86
-                    y:road16.y-25
-                    x:road23.x+100
-                    z:_Inter
-                    fillMode: Image.PreserveAspectCrop
+                    id: goddess
+                    source: "images/goddess.png"
+                    width: 124
+                    height: 164
+                    y:road2801.y-150
+                    x:road2804.x
                 }
-                Image {
-                    id: road25
-                    source: "images/toycloud5.png"
-                    width: 127
-                    height: 86
-                    y:road16.y-25
-                    x:road24.x+100
-                    z:_Inter
-                    fillMode: Image.PreserveAspectCrop
-                }
-                // Image {
-                //     id: road26
-                //     source: "images/toycloud1.png"
-                //     width: 127
-                //     height: 86
-                //     y:road2.y+125
-                //     x:road25.x+150
-                //     z:_Inter
-                //     fillMode: Image.PreserveAspectCrop
-                // }
-                // Component.onCompleted: {
-                //     updownAnimation1.start()
-                //             }
-                // NumberAnimation {
-                //     id: updownAnimation1
-                //     target: road26
-                //     properties: "y"
-                //     to: road.y - 400
-                //     duration: 2000
-                //     easing.type: Easing.InOutQuad
-                //     onFinished: updownAnimation_return1.start()
-                //     }
-                // NumberAnimation {
-                //     id: updownAnimation_return1
-                //     target: road26
-                //     properties: "y"
-                //     to: road.y + 400
-                //     duration: 2000
-                //     easing.type: Easing.InOutQuad
-                //     onFinished: updownAnimation1.start()
-                //     }
-                // Image {
-                //     id: road27
-                //     source: "images/toycloud5.png"
-                //     width: 127
-                //     height: 86
-                //     y:road26.y
-                //     x:road26.x+100
-                //     z:_Inter
-                //     fillMode: Image.PreserveAspectCrop
-                // }
             }
             Rectangle {
                         id: player2
@@ -1061,6 +1433,11 @@ Item {
                         y:300
                         x:0
                         onXChanged: {
+                            if(player2.x>road16.x){
+                                for(i=0;i<1;i++){
+                                  full_bad.start()
+                                }
+                            }
                             // 如果角色到达场景边缘的阈值
                             if (x + width >scrollThreshold &&background2.x>-background2.width*4) {
                                 // 移动场景内容（背景和角色）
@@ -1128,7 +1505,7 @@ Item {
                                 x = player2.x
                                 y = player2.y
                             }
-                        }
+                        }                   
                 }
         }
     }

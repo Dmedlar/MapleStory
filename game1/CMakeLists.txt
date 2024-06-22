@@ -215,8 +215,6 @@ qt_add_qml_module(
   RESOURCES
   images/money.png
   RESOURCES
-  images/云层-1.png
-  images/云层2.png
   images/Obj_acc1.img.grassySoil.nature.19.0.png
   images/Obj_acc1.img.grassySoil.nature.19.1.png
   images/Obj_acc1.img.grassySoil.nature.19.2.png
@@ -253,8 +251,6 @@ qt_add_qml_module(
   images/Obj_dungeon.img.blueCave.set2.16.0.png
   images/Obj_dungeon.img.blueCave.set4.4.0.png
   QML_FILES
-  Components.qml
-  QML_FILES
   Characters.qml
   RESOURCES
   part1/image133.png
@@ -278,7 +274,24 @@ qt_add_qml_module(
   part1/image225.png
   part1/image227.png
   part1/image229.png
-  part1/image232.png)
+  part1/image232.png
+  RESOURCES
+  images/clouds.png
+  images/clouds2.png
+  RESOURCES
+  images/Obj_dungeon2.img.toyCastle2.gate.6.0.png
+  images/Obj_dungeon2.img.toyCastle2.gate.6.1.png
+  images/Obj_dungeon2.img.toyCastle2.gate.6.2.png
+  images/Obj_dungeon2.img.toyCastle2.gate.6.3.png
+  images/Obj_dungeon2.img.deepSee.nature.7.0.png
+  images/Obj_dungeon2.img.deepSee.nature.7.1.png
+  images/Obj_dungeon2.img.deepSee.nature.7.2.png
+  images/Obj_dungeon2.img.deepSee.nature.7.4.png
+  images/Obj_dungeon2.img.deepSee.nature.7.3.png
+  images/Obj_dungeon2.img.deepSee.nature.7.5.png
+  RESOURCES images/Obj_acc3.img.skyStation.cloud.9.0.png images/Obj_acc3.img.skyStation.cloud.10.0.png images/Obj_acc3.img.skyStation.cloud.11.0.png images/Obj_acc3.img.skyStation.cloud.12.0.png images/Obj_acc3.img.skyStation.cloud.13.0.png images/Obj_acc3.img.skyStation.cloud.14.0.png images/Obj_acc3.img.skyStation.cloud.15.0.png images/Obj_acc6.img.folkvillige.nature.23.1.png images/Obj_acc6.img.folkvillige.nature.24.0.png images/sun.png
+  RESOURCES images/Obj_acc1.img.grassySoil.space.17.0.png images/Obj_acc1.img.grassySoil.space.17.1.png images/Obj_acc1.img.grassySoil.space.17.2.png
+  RESOURCES images/Obj_acc3.img.christmas.inside.12.0.png images/Obj_acc3.img.christmas.inside.12.1.png images/Obj_acc3.img.christmas.inside.12.2.png images/Obj_acc3.img.christmas.inside.12.3.png images/Obj_acc3.img.christmas.inside.12.4.png images/Obj_acc3.img.christmas.inside.12.5.png images/Obj_acc3.img.christmas.inside.12.6.png images/Obj_acc3.img.christmas.inside.12.7.png images/Obj_acc3.img.christmas.inside.12.8.png images/Obj_acc3.img.christmas.inside.12.9.png images/Obj_acc3.img.christmas.inside.12.10.png images/Obj_acc3.img.christmas.inside.12.11.png)
 
 target_compile_features(appgame1 PRIVATE cxx_std_20)
 
