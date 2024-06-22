@@ -48,7 +48,7 @@ Item {
     "images/Obj_dungeon.img.metroSubway.acc.20.11.png",
     ]
     property int currentIndex1:0
-
+   //第一关怪物动画
     property var images2:[
         "part1/image133.png",
         "part1/image135.png",
@@ -1000,7 +1000,57 @@ Item {
                     z:_Inter
                     fillMode: Image.PreserveAspectCrop
                 }
-
+                Image {
+                    id: road25
+                    source: "images/toycloud5.png"
+                    width: 127
+                    height: 86
+                    y:road16.y-25
+                    x:road24.x+100
+                    z:_Inter
+                    fillMode: Image.PreserveAspectCrop
+                }
+                // Image {
+                //     id: road26
+                //     source: "images/toycloud1.png"
+                //     width: 127
+                //     height: 86
+                //     y:road2.y+125
+                //     x:road25.x+150
+                //     z:_Inter
+                //     fillMode: Image.PreserveAspectCrop
+                // }
+                // Component.onCompleted: {
+                //     updownAnimation1.start()
+                //             }
+                // NumberAnimation {
+                //     id: updownAnimation1
+                //     target: road26
+                //     properties: "y"
+                //     to: road.y - 400
+                //     duration: 2000
+                //     easing.type: Easing.InOutQuad
+                //     onFinished: updownAnimation_return1.start()
+                //     }
+                // NumberAnimation {
+                //     id: updownAnimation_return1
+                //     target: road26
+                //     properties: "y"
+                //     to: road.y + 400
+                //     duration: 2000
+                //     easing.type: Easing.InOutQuad
+                //     onFinished: updownAnimation1.start()
+                //     }
+                // Image {
+                //     id: road27
+                //     source: "images/toycloud5.png"
+                //     width: 127
+                //     height: 86
+                //     y:road26.y
+                //     x:road26.x+100
+                //     z:_Inter
+                //     fillMode: Image.PreserveAspectCrop
+                // }
             }
             Rectangle {
                         id: player2
