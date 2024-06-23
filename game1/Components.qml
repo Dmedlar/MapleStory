@@ -3,7 +3,7 @@ import QtQuick.Controls
 import QtQuick.Window
 import QtMultimedia
 import QtQuick3D.Physics
-
+import game1
 Item {
     /*游戏的各个关卡界面*/
     property alias choose:_choose
@@ -1397,23 +1397,71 @@ Item{
                     source: "music/Bgm01.img.BadGuys.mp3" // 使用本地资源
                     loops: MediaPlayer.Infinite // 无限循环播放
                 }
-            // Image {
-            //     width:250*5
-            //     height:162*5
-            //     anchors.centerIn: parent
-            //     id: coke
-            //     z:1
-            //     source:images[currentIndex3]
-            // }
-            // Timer{
-            //     interval: 200
-            //     running:true
-            //     repeat: true
-            //     onTriggered: {
-            //         currentIndex3=(currentIndex3+1)%images3.length//循环每张图
-            //         coke.source=images3[currentIndex3]
-            //     }
-            // }
+            Character{
+                id:_character
+                // Character.setSpeed(20)
+                // setJumpForce(100)
+                // setGravity(30)
+            }
+            Image{
+                id:characterImage
+                source:"image/7126_1900493.png"
+                width:80
+                height:100
+                z:1
+                x:100
+                y:100
+                // Character.setSpeed(20)
+                transformOrigin: Image.Center//设置图像的原点
+                Behavior on x{
+                    NumberAnimation{
+                        duration: 200
+                        easing.type: Easing.Linear
+                    }
+                }
+                Behavior on y{
+                    NumberAnimation{
+                        duration: 200
+                        easing.type: Easing.Linear
+                    }
+                }
+            }
+            Timer{
+                interval: 16
+                running: true
+                onTriggered: {
+                    Character.update(1/60);
+                    characterImage.x=Character.m_x;
+                    characterImage.y=Character.m_y;
+                }
+            }
+            Keys.onPressed: {
+                switch(event.key){
+                case Qt.Key_A:
+                    character.setspeed(-100);
+                    break;
+                case Qt.Key_D:
+                    character.setspeed(100);
+                    break;
+                case Qt.Key_W:
+                    character.jump();
+                    break;
+                default:
+                    break;
+                }
+            }
+            Keys.onReleased: {
+                switch(event.key){
+                    case Qt.Key_A:
+                        character.setspeed(0);
+                        break;
+                    case Qt.Key_D:
+                        character.setspeed(0);
+                        break;
+                    default:
+                        break;
+                }
+            }
 
             /*背景图片*/
             Image {
