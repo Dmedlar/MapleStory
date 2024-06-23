@@ -31,7 +31,7 @@ Item {
         "part2/Obj_acc2.img.shineWood.gate.0.11.png",
     ]
     property int currentIndex:0//图片索引
-
+//第三关组件
     //黄金旋风
     property var images1: [
     "images/Obj_dungeon.img.metroSubway.acc.20.0.png",
@@ -85,28 +85,317 @@ Item {
     }
     //喷泉
     property var water: [
-    "images/Obj_acc1.img.grassySoil.space.17.0.png",
-    "images/Obj_acc1.img.grassySoil.space.17.1.png",
-    "images/Obj_acc1.img.grassySoil.space.17.2.png",
+    "images/Obj_acc11.img.erebTW.holybird.17.0.png",
+    "images/Obj_acc11.img.erebTW.holybird.17.1.png",
+    "images/Obj_acc11.img.erebTW.holybird.17.2.png",
     ]
     property int waterIndex: 0
-    //火炉
-    property var fire: [
-    "images/Obj_acc3.img.christmas.inside.12.0.png",
-        "images/Obj_acc3.img.christmas.inside.12.1.png",
-        "images/Obj_acc3.img.christmas.inside.12.2.png",
-        "images/Obj_acc3.img.christmas.inside.12.3.png",
-        "images/Obj_acc3.img.christmas.inside.12.4.png",
-        "images/Obj_acc3.img.christmas.inside.12.5.png",
-        "images/Obj_acc3.img.christmas.inside.12.6.png",
-        "images/Obj_acc3.img.christmas.inside.12.7.png",
-        "images/Obj_acc3.img.christmas.inside.12.8.png",
-        "images/Obj_acc3.img.christmas.inside.12.9.png",
-        "images/Obj_acc3.img.christmas.inside.12.10.png",
-        "images/Obj_acc3.img.christmas.inside.12.11.png",
+    // //火炉
+    // property var fire: [
+    // "images/Obj_acc3.img.christmas.inside.12.0.png",
+    //     "images/Obj_acc3.img.christmas.inside.12.1.png",
+    //     "images/Obj_acc3.img.christmas.inside.12.2.png",
+    //     "images/Obj_acc3.img.christmas.inside.12.3.png",
+    //     "images/Obj_acc3.img.christmas.inside.12.4.png",
+    //     "images/Obj_acc3.img.christmas.inside.12.5.png",
+    //     "images/Obj_acc3.img.christmas.inside.12.6.png",
+    //     "images/Obj_acc3.img.christmas.inside.12.7.png",
+    //     "images/Obj_acc3.img.christmas.inside.12.8.png",
+    //     "images/Obj_acc3.img.christmas.inside.12.9.png",
+    //     "images/Obj_acc3.img.christmas.inside.12.10.png",
+    //     "images/Obj_acc3.img.christmas.inside.12.11.png",
+    // ]
+    // property int fireIndex: 0
+    //火
+    Component{
+    id:fireComponent
+    Item{
+        property var fire: [
+        "images/Obj_acc10.img.timeTemplefire.acc.3.0.png",
+            "images/Obj_acc10.img.timeTemplefire.acc.3.1.png",
+            "images/Obj_acc10.img.timeTemplefire.acc.3.2.png",
+            "images/Obj_acc10.img.timeTemplefire.acc.3.4.png",
+            "images/Obj_acc10.img.timeTemplefire.acc.3.5.png",
+            "images/Obj_acc10.img.timeTemplefire.acc.3.6.png",
+            "images/Obj_acc10.img.timeTemplefire.acc.3.7.png",
+            "images/Obj_acc10.img.timeTemplefire.acc.3.8.png",
+            "images/Obj_acc10.img.timeTemplefire.acc.3.9.png",
+            "images/Obj_acc10.img.timeTemplefire.acc.3.10.png",
+            "images/Obj_acc10.img.timeTemplefire.acc.3.11.png",
+        ]
+        property int fireIndex: 0
+        Image {
+            id: fire0
+            source: fire[fireIndex]
+            width: 79
+            height:89
+        }
+        Timer{
+        id:fire0Timer
+        interval: 200
+        running:true
+        repeat: true
+        onTriggered: {
+        fireIndex=(fireIndex+1)%fire.length
+            fire0.source=fire[fireIndex]
+        }
+        }
+    }
+    }
+    //水晶
+    Component{
+    id:bergComponent
+    Item{
+        property var berg: [
+        "images/Obj_acc10.img.timeTempleice.acc.0.0.png",
+            "images/Obj_acc10.img.timeTempleice.acc.0.1.png",
+            "images/Obj_acc10.img.timeTempleice.acc.0.2.png",
+            "images/Obj_acc10.img.timeTempleice.acc.0.3.png",
+            "images/Obj_acc10.img.timeTempleice.acc.0.4.png",
+            "images/Obj_acc10.img.timeTempleice.acc.0.5.png",
+            "images/Obj_acc10.img.timeTempleice.acc.0.6.png",
+            "images/Obj_acc10.img.timeTempleice.acc.0.7.png",
+            "images/Obj_acc10.img.timeTempleice.acc.0.8.png",
+            "images/Obj_acc10.img.timeTempleice.acc.0.9.png",
+        ]
+        property int bergIndex: 0
+        Image {
+            id: berg0
+            source: berg[bergIndex]
+            width: 127
+            height: 245
+        }
+        Timer{
+        id:bergTimer
+        interval: 200
+        running:true
+        repeat: true
+        onTriggered: {
+        bergIndex=(bergIndex+1)%berg.length
+        berg0.source=berg[bergIndex]
+        }
+        }
+    }
+    }
+    //火+烟
+    Component{
+    id:fire1Component
+    Item{
+        property var fire1: [
+        "images/Obj_acc12.img.aran.fire.0.0.png",
+        "images/Obj_acc12.img.aran.fire.0.1.png",
+            "images/Obj_acc12.img.aran.fire.0.2.png",
+            "images/Obj_acc12.img.aran.fire.0.3.png",
+            "images/Obj_acc12.img.aran.fire.0.4.png",
+            "images/Obj_acc12.img.aran.fire.0.5.png",
+        ]
+        property int fire1Index: 0
+        Image {
+            id: fire01
+            source: fire1[fire1Index]
+            width: 132
+            height: 279
+        }
+        Timer{
+        id:fire01Timer
+        interval: 200
+        running:true
+        repeat: true
+        onTriggered: {
+        fire1Index=(fire1Index+1)%fire1.length
+            fire01.source=fire1[fire1Index]
+        }
+        }
+    }
+    }
+    Component{
+    id:cordComponent
+    Item{
+        property var cord: [
+        "images/Obj_acc11.img.erebTR.trap.3.0.png",
+        "images/Obj_acc11.img.erebTR.trap.3.1.png",
+        "images/Obj_acc11.img.erebTR.trap.3.2.png",
+        ]
+        property int cordIndex: 0
+        Image {
+            id: cord1
+            source: cord[cordIndex]
+            width: 32
+            height: 80
+        }
+        Timer{
+        id:cordTimer
+        interval: 100
+        running:true
+        repeat: true
+        onTriggered: {
+        cordIndex=(cordIndex+1)%cord.length
+            cord1.source=cord[cordIndex]
+        }
+        }
+    }
+    }
+    Component{
+     id:firesComponent
+     Item{
+         property var fires: [
+             "images/Obj_acc12.img.aran.fire.1.0.png",
+             "images/Obj_acc12.img.aran.fire.1.1.png",
+             "images/Obj_acc12.img.aran.fire.1.2.png",
+             "images/Obj_acc12.img.aran.fire.1.3.png",
+             "images/Obj_acc12.img.aran.fire.1.4.png",
+             "images/Obj_acc12.img.aran.fire.1.5.png",
+         ]
+         property int firesIndex: 0
+         Image {
+             id: fires0
+             source: fires[firesIndex]
+             width: 300
+             height: 249
+         }
+         Timer{
+         interval: 100
+         running: true
+         repeat: true
+         onTriggered: {
+         firesIndex=(firesIndex+1)%fires.length
+             fires0.source=fires[firesIndex]
+         }
+         }
+     }
+}
+    Component{
+    id:thunderComponent
+    Item{
+        property var thunder: [
+        "images/Obj_acc13.img.cityLT.quest.2.0.png",
+        "images/Obj_acc13.img.cityLT.quest.2.1.png",
+        "images/Obj_acc13.img.cityLT.quest.2.2.png",
+        "images/Obj_acc13.img.cityLT.quest.2.3.png",
+        "images/Obj_acc13.img.cityLT.quest.2.4.png",
+        "images/Obj_acc13.img.cityLT.quest.2.5.png",
+        "images/Obj_acc13.img.cityLT.quest.2.6.png",
+        "images/Obj_acc13.img.cityLT.quest.2.7.png",
+        "images/Obj_acc13.img.cityLT.quest.2.8.png",
+        "images/Obj_acc13.img.cityLT.quest.2.9.png",
+        "images/Obj_acc13.img.cityLT.quest.2.10.png",
+        "images/Obj_acc13.img.cityLT.quest.2.11.png",
+        ]
+        property int thunderIndex: 0
+        Image {
+            id: th
+            source: thunder[thunderIndex]
+            width: 260
+            height: 122
+        }
+        Timer
+        {
+        interval: 100
+        running: true
+        repeat: true
+        onTriggered: {
+        thunderIndex=(thunderIndex+1)%thunder.length
+            th.source=thunder[thunderIndex]
+        }
+        }
+    }
+    }
+    Component{
+    id:fires1Component
+    Item{
+        property var fires1: [
+        "images/Obj_acc12.img.aran.fire.4.0.png",
+            "images/Obj_acc12.img.aran.fire.4.1.png",
+            "images/Obj_acc12.img.aran.fire.4.2.png",
+            "images/Obj_acc12.img.aran.fire.4.3.png",
+            "images/Obj_acc12.img.aran.fire.4.4.png",
+            "images/Obj_acc12.img.aran.fire.4.5.png",
+        ]
+        property int fires1Index: 0
+        Image {
+            id: fi
+            source: fires1[fires1Index]
+            width: 293
+            height: 212
+        }
+        Timer
+        {
+        interval: 100
+        running: true
+        repeat: true
+        onTriggered: {
+        fires1Index=(fires1Index+1)%fires1.length
+            fi.source=fires1[fires1Index]
+        }
+        }
+    }
+    }
+    Component{
+id:goddessComponent
+Item{
+    property var god: [
+    "images/Obj_acc11.img.erebTW.holybird.3.0.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.1.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.2.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.3.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.4.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.5.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.6.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.7.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.8.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.9.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.10.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.11.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.12.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.13.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.14.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.15.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.16.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.17.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.18.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.19.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.20.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.21.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.22.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.23.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.24.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.25.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.26.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.27.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.28.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.29.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.30.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.31.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.32.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.33.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.34.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.35.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.36.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.37.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.38.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.39.png",
+        "images/Obj_acc11.img.erebTW.holybird.3.40.png",
     ]
-    property int fireIndex: 0
-    //第一关怪物动画
+    property int godIndex: 0
+    Image {
+        id: god0
+        source: god[godIndex]
+        width: 123
+        height: 75
+    }
+    Timer
+    {
+    interval: 100
+    running: true
+    repeat: true
+    onTriggered: {
+    godIndex=(godIndex+1)%god.length
+        god0.source=god[godIndex]
+    }
+    }
+}
+}
+     //第一关怪物动画
     property var images2:[
         "part1/image133.png",
         "part1/image135.png",
@@ -1684,14 +1973,11 @@ Item {
                 y:_Inter.y-80
                 z:_Inter
                 }
-                Image {
-                    id: berg
-                    source: "images/berg.png"
-                    width: 127
-                    height: 245
-                    x:toydoor.x+toydoor.width
-                    y:toydoor.y+70
-                }
+                Loader{
+                sourceComponent: bergComponent
+                x:toydoor.x+toydoor.width
+                y:toydoor.y+70
+                               }
                 Image {
                     id: road
                     source: "images/toycloud.png"
@@ -2105,23 +2391,15 @@ Item {
                     z:2
                     fillMode: Image.PreserveAspectCrop
                 }
-                Image {
-                    id: fire1
-                    source: fire[fireIndex]
-                    width: 153*0.6
-                    height: 178*0.6
-                    x:road16.x+20
-                    y:road16.y-98
+                Loader{
+                sourceComponent: fireComponent
+                x:road16.x+35
+                y:road16.y-75
                 }
-                Timer{
-                id:fireTimer
-                interval: 100
-                running: true
-                repeat: true
-                onTriggered:{
-                fireIndex=(fireIndex+1)%fire.length
-                    fire1.source=fire[fireIndex]
-                }
+                Loader{
+                sourceComponent: cordComponent
+                x:road16.x+road16.width+80
+                y:road16.y-road16.height-10
                 }
                 Image {
                     id: bad
@@ -2130,20 +2408,33 @@ Item {
                     height: 41
                     x:road16.x+80
                     y:-41
+                    rotation: 30
                 }
+                SequentialAnimation{
+                    running: shouldAnimate.value
                 NumberAnimation {
                             id: full_bad
                             target: bad
                             properties: "y"
-                            to: road16.y-38
+                            to: road16.y-30
                             duration: 5000
                             easing.type: Easing.OutQuad
                         }
+
+                }
                 Loader{
                 sourceComponent: skylight
                 y:road16.y-50
                 x:road16.x
                 }
+            Image {
+                id: crods
+                source: "images/Obj_acc10.img.timeTemplefire.pillar.10.0.png"
+                width: 366
+                height: 200
+                x:road17.x-60
+                y:road17.y+100
+            }
                 Image {
                     id: road17
                     source: "images/Obj_acc3.img.skyStation.cloud.14.0.png"
@@ -2159,6 +2450,27 @@ Item {
                 y:road17.y+190
                 x:road17.x+140
                 }
+            Loader{
+            sourceComponent: firesComponent
+                x:road17.x+100
+                y:road17.y-230
+            }
+                Image {
+                    id: road21
+                    source: "images/Obj_acc3.img.skyStation.cloud.14.0.png"
+                    width: 305
+                    height: 121
+                    y:road16.y-200
+                    x:road16.x+215
+                    z:_Inter
+                    fillMode: Image.PreserveAspectCrop
+                }
+                Loader{
+                sourceComponent: fire1Component
+                x:road21.x+50
+                y:road21.y-230
+                rotation: 30
+                }
                 Image {
                     id: road18
                     source: "images/Obj_acc3.img.skyStation.cloud.14.0.png"
@@ -2173,6 +2485,30 @@ Item {
                 sourceComponent: skylight
                 y:road18.y-120
                 x:road18.x+100
+                }
+                Image {
+                    id: ice
+                    source: "images/Obj_acc10.img.timeTempleice.pillar.4.0.png"
+                    width: 143*1.5
+                    height: 130*1.5
+                    y:80
+                    x:road18.x+100
+                }
+                Image {
+                    id: ice1
+                    source: "images/Obj_acc10.img.timeTempleice.pillar.6.0.png"
+                    width: 365
+                    height: 216
+                    y:80
+                    x:ice.x+ice.width
+                }
+                Image {
+                    id: crods1
+                    source: "images/Obj_acc10.img.timeTemplefire.pillar.11.0.png"
+                    width: 366
+                    height: 200
+                    x:road18.x-60
+                    y:road18.y+100
                 }
                 Image {
                     id: road19
@@ -2195,6 +2531,14 @@ Item {
                 x:road19.x+150
                 }
                 Image {
+                    id: crack
+                    source: "images/Obj_acc10.img.timeTemplefire.pillar.4.0.png"
+                    width: 302
+                    height: 166
+                    x:road19.x+60
+                    y:road19.y +120
+                }
+                Image {
                     id: road20
                     source: "images/Obj_acc3.img.skyStation.cloud.14.0.png"
                     width: 305
@@ -2208,6 +2552,11 @@ Item {
                 sourceComponent: skylight
                 y:road20.y-420
                 x:road20.x+30
+                }
+                Loader{
+                sourceComponent: fires1Component
+                x:road20.x
+                y:road20.y-180
                 }
                 Image {
                     id: road26
@@ -2237,6 +2586,11 @@ Item {
                             easing.type: Easing.InOutQuad
                             onFinished:upDownAnimation1.start()
                         }
+                Loader{
+                sourceComponent: thunderComponent
+                x:road26.x
+                y:road18.y-100
+                }
                 Image {
                     id: road28
                     source: "images/Obj_acc3.img.skyStation.cloud.14.0.png"
@@ -2283,14 +2637,54 @@ Item {
                 x:road30.x
                 }
                 Image {
+                    id: crack1
+                    source: "images/Obj_acc10.img.timeTemplefire.pillar.6.0.png"
+                    width: 233
+                    height: 103
+                    x:road30.x-100
+                    y:road30.y-106
+                }
+                Image {
                     id: road2801
                     source: "images/Obj_acc3.img.skyStation.cloud.12.0.png"
                     width: 190
                     height: 88
                     y:road20.y-250
                     x:road26.x+320
-                    z:_Inter
+                    z:2
                     fillMode: Image.PreserveAspectCrop
+                }
+                Image {
+                    id: cords02
+                    source: "images/Obj_acc10.img.timeTemplefire.pillar.9.0.png"
+                    width: 399
+                    height: 175
+                    x:road2801.x+20
+                    y:road2801.y+50
+                }
+                Image {
+                    id: ice3
+                    source: "images/Obj_acc10.img.timeTempleice.pillar.7.0.png"
+                    width: 203
+                    height: 206
+                    x:road2801.x
+                    y:20
+                }
+                Image {
+                    id: ice4
+                    source: "images/Obj_acc10.img.timeTempleice.pillar.5.0.png"
+                    width: 189
+                    height: 228
+                    x:ice3.x+203
+                    y:20
+                }
+                Image {
+                    id: ice5
+                    source: "images/Obj_acc10.img.timeTempleice.pillar.8.0.png"
+                    width: 166
+                    height: 150
+                    x:ice4.x+189
+                    y:20
                 }
                 Image {
                     id: road2802
@@ -2330,6 +2724,12 @@ Item {
                     y:road2801.y-150
                     x:road2804.x
                 }
+            Loader{
+            sourceComponent: goddessComponent
+                x:goddess.x-80
+                y:road2804.y-60
+                z:2
+            }
             }
             Rectangle {
                         id: player2
@@ -2339,12 +2739,15 @@ Item {
                         radius: 25 // 使角色为圆形
                         y:300
                         x:0
+                        Binding{
+                        target:player2
+                        id:shouldAnimate
+                        value:player2.x>=road16.x?true:false
+                        }
                         onXChanged: {
-                            if(player2.x>road16.x){
-                                for(i=0;i<1;i++){
-                                  full_bad.start()
-                                }
-                            }
+                            // if(x+width>=road16.x){
+                            //       full_bad.start()
+                            // }
                             // 如果角色到达场景边缘的阈值
                             if (x + width >scrollThreshold &&background2.x>-background2.width*4) {
                                 // 移动场景内容（背景和角色）
@@ -2436,9 +2839,78 @@ Item {
                 id: background3
                 width: parent.width
                 height: parent.height
-                source: "image/background0.jpg"
+                source: "part4/sea.jpg"
                 fillMode: Image.PreserveAspectCrop
+                Image {
+                    id: background3B
+                    x:parent.width
+                    width: 1300
+                    height: 900
+                    source: "part4/sea.jpg"
+                    fillMode: Image.PreserveAspectCrop
+                }
+                Image {
+                    id: background3C
+                    x:parent.width+1300
+                    width: 1300
+                    height: 900
+                    source: "part4/sea.jpg"
+                    fillMode: Image.PreserveAspectCrop
+                }
+                Image {
+                    id: background3d
+                    x:parent.width+1300*2
+                    width: 1300
+                    height: 900
+                    source: "part4/sea.jpg"
+                    fillMode: Image.PreserveAspectCrop
+                }
+                Image {
+                    id: background3e
+                    x:parent.width+1300*3
+                    width: 1300
+                    height: 900
+                    source: "part4/sea.jpg"
+                    fillMode: Image.PreserveAspectCrop
+                }
             }
+            Rectangle {
+                        id: player3
+                        width: 50
+                        height: 50
+                        color: "red"
+                        radius: 25 // 使角色为圆形
+                        y:300
+                        x:0
+                        onXChanged: {
+                            // if(x+width>=road16.x){
+                            //       full_bad.start()
+                            // }
+                            // 如果角色到达场景边缘的阈值
+                            if (x + width >scrollThreshold &&background2.x>-background2.width*4) {
+                                // 移动场景内容（背景和角色）
+                                var scrollDistance = x + width - scrollThreshold;
+                                background2.x -= scrollDistance;
+                                x=gameScene2.width*0.8-player2.width
+                            }
+                        }
+
+                        MouseArea {
+                                  id: dragArea3
+                                    anchors.fill: parent
+                                    drag.target: parent
+                                }
+                        // 使角色可以通过水平拖拽移动
+                        Drag.active: dragArea3.drag.active
+                        Drag.hotSpot.x: player3.width / 2
+                        Drag.hotSpot.y: player3.height / 2
+                        Drag.onActiveChanged: {
+                            if (!dragArea3.drag.active) {
+                                x = player3.x
+                                y = player3.y
+                            }
+                        }
+                }
         }
     }
 
